@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>myna - Homely meals, delivered with love...</title>
+  <style>
+    /* ===============================
+       Basic Reset & Typography
+    ================================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #1C1C1C;
+      color: #EFEFEF;
+      line-height: 1.5;
+      font-size: 16px;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 1rem;
+    }
+    a {
+      color: #FBC02D;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1, h2, h3, h4 {
+      color: #FBC02D;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* ===============================
+       Header / Hero Section
+    ================================ */
+    header {
+      width: 100%;
+      max-width: 1000px;
+      text-align: center;
+      position: relative;
+      padding: 2rem 0 1rem;
+    }
+    .free-delivery {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background-color: #FBC02D;
+      color: #1C1C1C;
+      padding: 0.25rem 0.5rem;
+      font-weight: bold;
+      font-size: 0.9rem;
+      border-radius: 4px;
+    }
+    /* Use all-lowercase for "myna" */
+    .myna-title {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-transform: lowercase;
+    }
+    .introducing {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+    .main-heading {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .price-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem 0;
+    }
+    
+    .price-info .daily {
+      font-size: 2rem;
+      color: #FBC02D;
+    }
+    
+    .price-info .monthly {
+      font-size: 2rem;
+      color: #FBC02D;
+      margin-top: 0; /* Removed extra space */
+    }
+    
+    .price-info .sub-price {
+      font-size: 0.8rem;
+      color: #EFEFEF;
+    }
+    
+    
+    /* ===============================
+       Menu Section
+    ================================ */
+    .menu-section {
+      width: 100%;
+      max-width: 1000px;
+      margin-bottom: 2rem;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .menu-column {
+      background-color: #2E2E2E;
+      border-radius: 6px;
+      padding: 1rem;
+    }
+    .menu-column h3 {
+      margin-bottom: 0.5rem;
+      color: #FBC02D;
+    }
+    .menu-column ul {
+      list-style: disc;
+      padding-left: 1.2rem;
+    }
+    
+    /* ===============================
+       Calendar Section
+    ================================ */
+    .calendar-section {
+      width: 100%;
+      max-width: 1000px;
+      margin-bottom: 2rem;
+    }
+    .calendar-section h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .calendar-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .calendar-table thead {
+      background-color: #2E2E2E;
+    }
+    .calendar-table th {
+      padding: 0.75rem;
+      text-align: center;
+      font-weight: 600;
+    }
+    .calendar-table td {
+      vertical-align: top;
+      border: 1px solid #3A3A3A;
+      padding: 0.75rem;
+      height: 120px;
+      width: 14.285%;
+    }
+    .date-label {
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+      color: #FBC02D;
+      display: block;
+    }
+    
+    /* ===============================
+       Footer
+    ================================ */
+    footer {
+      width: 100%;
+      max-width: 1000px;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .contact-info {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+    .highlight {
+      color: #FBC02D;
+      font-weight: bold;
+    }
+    .closing-quote {
+      margin: 2rem 0 1rem;
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="free-delivery">FREE DELIVERY</div>
+    <!-- QR code removed per request -->
+    <h1 class="myna-title">myna</h1>
+    <p class="introducing">introducing</p>
+    <h2 class="main-heading">Homely meals, delivered with love...</h2>
+    
+    <div class="price-info">
+      <div class="daily">₹250/day</div>
+      <div class="monthly">₹6969/month <span class="sub-price">(for first 50 customers)</span></div>
+    </div>
+    
+    <div class="price-text">
+      <p>Savour 5 non-veg meals a week—fresh, flavorful, and fulfilling.<br>
+      Flexible plans—choose daily, weekly, or monthly subscriptions.<br>
+      Wholesome, home-cooked meals freshly prepared 1 hour before delivery.<br>
+      Nutritionally balanced to keep you energized throughout the day.<br>
+      Free delivery to your preferred location.</p>
+    </div>
+  </header>
+  
+  <!-- Menu Section -->
+  <section class="menu-section">
+    <div class="menu-grid">
+      <!-- Breakfast Column -->
+      <div class="menu-column">
+        <h3>Breakfast</h3>
+        <ul>
+          <li>4 Idli + Sambar + Onion/Tomato Chutney</li>
+          <li>Keppa kanki + pickle</li>
+          <li>Rava Upma + Coconut Chutney</li>
+          <li>Pongal + Sambar + Coconut Chutney</li>
+          <li>3 Appam + Coconut Milk</li>
+          <li>3 Uthapam + Peanut Chutney + Mint Chutney</li>
+        </ul>
+      </div>
+      
+      <!-- Lunch Column -->
+      <div class="menu-column">
+        <h3>Lunch</h3>
+        <ul>
+          <li>Chicken Biryani + Raita + Boiled Egg</li>
+          <li>4 Chapathi + Egg Gravy</li>
+          <li>Rice + Chicken gravy + Omelette</li>
+          <li>Ghee Rice + Blood Chicken/Beef Gravy</li>
+          <!-- Veg Meals Combos moved to the bottom -->
+          <li>Veg Meals Combo 1: Rice, Sambar, Rasam, 3 Veg Curries, Papad</li>
+          <li>Veg Meals Combo 2: Rice, Puzhikolambu, 2 Poriyal, Kootu, Curd Rice, Pickle</li>
+        </ul>
+      </div>
+      
+      <!-- Dinner Column -->
+      <div class="menu-column">
+        <h3>Dinner</h3>
+        <ul>
+          <li>4 Chapathi + Palak Paneer</li>
+          <li>3 Appam + Coconut Milk</li>
+          <li>2 Chola Poori + Channa Masala</li>
+          <li>4 Chapathi + Dal Fry + Egg Atho</li>
+          <li>4 Poori + Potato Kuruma + Veg Kuruma</li>
+          <li>Puttu + Meen Curry</li>
+          <li>Idiyappam + Kadala curry/Chicken stew</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Calendar Section -->
+  <section class="calendar-section">
+    <h2>March 2025 Meal Calendar</h2>
+    <table class="calendar-table">
+      <thead>
+        <tr>
+          <th>Sunday</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+        </tr>
+      </thead>
+      <tbody id="calendar-body">
+        <!-- Calendar rows will be populated by JavaScript -->
+      </tbody>
+    </table>
+  </section>
+  
+  <!-- Closing Quote -->
+  <div class="closing-quote">
+    Never again must you wander in search of home!!<br>
+    Here, it finds you, warm and waiting, every single day, every meal.
+  </div>
+  
+  <footer>
+    <p class="contact-info">
+      Contact: <span class="highlight">+91 9995309066</span> | 
+      <a href="https://wa.me/919995309066" target="_blank">WhatsApp</a> for a trial meal!
+    </p>
+  </footer>
+  
+  <script>
+    // Wait for the DOM to be fully loaded before executing
+    document.addEventListener("DOMContentLoaded", function() {
+      // Inline CSV data (no external calls)
+      const csvData = `date,breakfast,lunch,dinner
+2025-03-01,"4 Idli + Sambar + Onion/Tomato Chutney","Veg Meals Combo 2","4 Chapathi + Palak Paneer"
+2025-03-02,"Keppa kanji + pickle","Chicken Biryani + Raita + 1 boiled egg","3 Appam + Coconut Milk"
+2025-03-03,"Rava Upma + Coconut Chutney","Veg Meals (Combo 1)","Chola Poori + Channa Masala"
+2025-03-04,"3 Uthapam + Peanut chutney + Mint Chutney","Rice + Chicken Gravy + Omelette","4 Chapathi + Dal Fry + 1 egg atho"
+2025-03-05,"Pongal + Sambhar + Coconut Chutney","4 Chapathi + Egg Gravy","Puttu + Meen Curry"
+2025-03-06,"4 Idli + Sambhar + Tomato Chutney","Ghee Rice + Blood Chicken/ Beef Gravy","4 Poori + Potato Kuruma + 3 Veg Kuruma"
+2025-03-07,"3 Appam + Coconut Milk","Meen Kolambu + Meen Fry","Idiyappam + Kadala Curry"
+2025-03-08,"4 Idli + Sambar + Onion Chutney","Veg Meals (Combo 2)","4 Chapathi + Palak Panner"
+2025-03-09,"Rava Upma + Coconut Chutney","Chicken Biryani + Raita + 1 boiled egg","Pongal + Sambhar + Coconut Chutney"
+2025-03-10,"Pongal + Sambhar + Coconut Chutney","Veg Meals (Combo 2)","Chola Poori + Channa Masala"
+2025-03-11,"4 Idli + Sambhar + Tomato Chutney","Rice + Chicken Gravy + Omelette","4 Chapathi + Dal Fry + 1 egg atho"
+2025-03-12,"Pongal + Sambhar + Coconut Chutney","4 Chapathi + Egg Gravy","Puttu + Meen Curry"
+2025-03-13,"3 Uthapam + Peanut chutney + Mint Chutney","Ghee Rice + Blood Chicken/ Beef Gravy","4 Poori + Potato Kuruma + 3 Veg Kuruma"
+2025-03-14,"Keppa kanji + pickle","Rice + Dal Fry + Nethili Fry","Idiyappam + Chicken Stew"
+2025-03-15,"4 Idli + Sambar + Onion Chutney","Veg Meals (Combo 1)","4 Chapathi + Palak Panner"
+2025-03-16,"Keppa kanji + pickle","Chicken Biryani + Raita + 1 boiled egg","4 Idli + Sambhar + Tomato Chutney"
+2025-03-17,"Rava Upma + Coconut Chutney","Veg Meals (Combo 1)","Chola Poori + Channa Masala"
+2025-03-18,"3 Uthapam + Peanut chutney + Mint Chutney","Ghee Rice + Pepper Chicken","4 Chapathi + Dal Fry + 1 egg atho"
+2025-03-19,"Rava Upma + Coconut Chutney","4 Chapathi + Egg Gravy","Puttu + Meen Curry"
+2025-03-20,"4 Idli + Sambhar + Tomato Chutney","3 Uthapam + Peanut chutney + Mint Chutney","4 Poori + Potato Kuruma + 3 Veg Kuruma"
+2025-03-21,"3 Appam + Coconut Milk","Meen Kolambu + Meen Fry","Idiyappam + Kadala Curry"
+2025-03-22,"4 Idli + Sambar + Onion Chutney","Veg Meals (Combo 2)","4 Chapathi + Palak Panner"
+2025-03-23,"3 Appam + Coconut Milk","Chicken Biryani + Raita + 1 boiled egg","Curd Rice + Potato fry + Pickle"
+2025-03-24,"Pongal + Sambhar + Coconut Chutney","Veg Meals (Combo 2)","Chola Poori + Channa Masala"
+2025-03-25,"4 Idli + Sambhar + Tomato Chutney","Rice + Chicken Gravy + Omelette","4 Chapathi + Dal Fry + 1 egg atho"
+2025-03-26,"Pongal + Sambhar + Coconut Chutney","4 Chapathi + Egg Gravy","Puttu + Meen Curry"
+2025-03-27,"3 Uthapam + Peanut chutney + Mint Chutney","Ghee Rice + Blood Chicken/ Beef Gravy","4 Poori + Potato Kuruma + 3 Veg Kuruma"
+2025-03-28,"Keppa kanji + pickle","Rice + Dal Fry + Nethili Fry","Idiyappam + Chicken Stew"
+2025-03-29,"4 Idli + Sambar + Onion Chutney","Veg Meals (Combo 1)","4 Chapathi + Palak Panner"
+2025-03-30,"Keppa kanji + pickle","Chicken Biryani + Raita + 1 boiled egg","Curd Rice + Potato fry + Pickle"
+2025-03-31,"Rava Upma + Coconut Chutney","Veg Meals (Combo 2)","Chola Poori + Channa Masala"
+`;
+      
+      function parseCSV(csv) {
+        const lines = csv.trim().split("\n");
+        const headers = lines.shift().split(",");
+        return lines.map(line => {
+          const parts = [];
+          let current = '';
+          let inQuotes = false;
+          for (let i = 0; i < line.length; i++) {
+            const char = line[i];
+            if (char === '"') {
+              inQuotes = !inQuotes;
+            } else if (char === ',' && !inQuotes) {
+              parts.push(current.trim());
+              current = '';
+            } else {
+              current += char;
+            }
+          }
+          parts.push(current.trim());
+          const obj = {};
+          headers.forEach((h, idx) => {
+            obj[h.trim()] = parts[idx]?.replace(/^"|"$/g, '');
+          });
+          return obj;
+        });
+      }
+      
+      const mealData = parseCSV(csvData);
+      const mealMap = {};
+      mealData.forEach(item => {
+        mealMap[item.date] = {
+          breakfast: item.breakfast,
+          lunch: item.lunch,
+          dinner: item.dinner
+        };
+      });
+      
+      const calendarBody = document.getElementById('calendar-body');
+      const daysInMarch = 31;
+      function dayOfWeek(year, month, day) {
+        return new Date(year, month, day).getDay();
+      }
+      const calYear = 2025;
+      const calMonth = 2; // March (0-indexed)
+      let currentDay = 1;
+      const weeks = [];
+      let week = new Array(7).fill(null);
+      const firstDayWeekday = dayOfWeek(calYear, calMonth, 1);
+      for (let i = 0; i < firstDayWeekday; i++) {
+        week[i] = null;
+      }
+      while (currentDay <= daysInMarch) {
+        const dow = dayOfWeek(calYear, calMonth, currentDay);
+        week[dow] = currentDay;
+        if (dow === 6) {
+          weeks.push(week);
+          week = new Array(7).fill(null);
+        }
+        currentDay++;
+      }
+      if (week.some(day => day !== null)) {
+        weeks.push(week);
+      }
+      weeks.forEach(weekArr => {
+        const row = document.createElement('tr');
+        weekArr.forEach(dayNum => {
+          const cell = document.createElement('td');
+          if (dayNum) {
+            const dateStr = `2025-03-${String(dayNum).padStart(2, '0')}`;
+            cell.innerHTML = `<span class="date-label">${dayNum}</span>`;
+            if (mealMap[dateStr]) {
+              cell.innerHTML += `
+                <div><strong>Breakfast:</strong> ${mealMap[dateStr].breakfast}</div>
+                <div><strong>Lunch:</strong> ${mealMap[dateStr].lunch}</div>
+                <div><strong>Dinner:</strong> ${mealMap[dateStr].dinner}</div>
+              `;
+            } else {
+              cell.innerHTML += `<div>No data</div>`;
+            }
+          }
+          row.appendChild(cell);
+        });
+        calendarBody.appendChild(row);
+      });
+    });
+  </script>
+</body>
+</html>
