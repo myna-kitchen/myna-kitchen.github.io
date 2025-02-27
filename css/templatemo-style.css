@@ -1051,15 +1051,3 @@ address {
   animation: highlight 1.8s infinite ease-in-out;
 }
 
-@keyframes highlight {
-  0% { width: 30%; opacity: 0.5; }
-  50% { width: 60%; opacity: 1; }
-  100% { width: 30%; opacity: 0.5; }
-}
-
-/* Price Highlight (for ₹ amounts) */
-.price-highlight {
-  color: #c49b16; /* Rich Gold */
-  font-weight: 600;
-  font-size: 1.4rem;
-}
