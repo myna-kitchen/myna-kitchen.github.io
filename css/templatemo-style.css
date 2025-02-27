@@ -856,84 +856,210 @@ address {
 .panel p {
   padding: 5px 20px 30px;
 }
-
 .calendar-section {
-  width: 100%;
-  max-width: 1000px;
-  margin: auto; /* Centers horizontally */
-  margin-top: 5vh; /* Adjust spacing from the top */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers child elements */
-  justify-content: center; /* Helps with vertical centering */
-  min-height: 90vh; /* Ensures it takes up most of the screen */
+  background: linear-gradient(to bottom, #f9fbfc, #e7eef3);
+  padding: 30px;
+  border-radius: 16px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
 }
 
-.calendar-section h2 {
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #333; /* Darker text for readability */
+.calendar-section:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .calendar-table {
   width: 100%;
-  border-collapse: collapse;
-  background-color: #fff; /* Light background for better contrast */
-  border-radius: 8px;
-  overflow: hidden; /* Ensures rounded corners apply properly */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-}
-
-.calendar-table thead {
-  background-color: #f4f4f4; /* Light gray for subtle contrast */
+  border-collapse: separate;
+  border-spacing: 12px;
 }
 
 .calendar-table th {
-  padding: 0.75rem;
-  text-align: center;
-  font-weight: 600;
-  color: #333; /* Dark text for better contrast */
-  border-bottom: 2px solid #ddd; /* Subtle bottom border */
+  background: linear-gradient(135deg, #74c69d, #4caf50);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .calendar-table td {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   vertical-align: top;
-  border: 1px solid #ddd; /* Light gray border */
-  padding: 0.75rem;
-  height: 120px;
-  width: 14.285%;
-  background-color: #fff; /* Ensures light background */
+  backdrop-filter: blur(14px);
 }
 
-.date-label {
-  font-weight: bold;
-  margin-bottom: 0.25rem;
-  color: #D32F2F; /* Deep red for a subtle but noticeable highlight */
-  display: block;
-  font-size: 1rem;
+.calendar-table td:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
 }
 
-.meal-type {
-  display: block;
+/* Meal Box - Aesthetic Glassmorphism */
+.meal-container {
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 14px;
+  font-weight: 500;
   font-size: 16px;
-  text-transform: uppercase;
-  color: white;
-  background-color: #ff5733;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-weight: bold;
-  width: fit-content;
-  margin-bottom: 4px;
+  text-align: left;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.3s ease-in-out;
 }
 
+.meal-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Meal Type Name */
+.meal-name {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+/* Meal Description */
+.meal-desc {
+  font-size: 15px;
+  color: #333;
+  font-weight: 400;
+}
+
+/* Meal Icons */
+.meal-icon {
+  font-size: 22px;
+  color: #555;
+}
+
+/* Color Themes for Meal Cards */
 .breakfast {
-  background-color: #ff5733; /* Reddish-orange */
+  background: linear-gradient(135deg, rgba(255, 214, 165, 0.5), rgba(255, 183, 94, 0.5));
+  color: #e65100;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 5px;
 }
 
 .lunch {
-  background-color: #33a1ff; /* Light blue */
+  background: linear-gradient(135deg, rgba(179, 229, 252, 0.5), rgba(129, 212, 250, 0.5));
+  color: #1565c0;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 5px;
 }
 
 .dinner {
-  background-color: #28a745; /* Green */
+  background: linear-gradient(135deg, rgba(200, 230, 201, 0.5), rgba(165, 214, 167, 0.5));
+  color: #2e7d32;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+/* Date Label */
+.date-label {
+  display: block;
+  background: linear-gradient(135deg, #ff9e80, #ff7043);
+  padding: 8px 16px;
+  border-radius: 22px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.date-label:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Price Announcement Container */
+.price-announcement {
+  background: #fff;
+  padding: 18px 22px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  width: fit-content;
+  margin: 20px auto 30px; /* Added Bottom Space */
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Smooth Hover Effect */
+.price-announcement:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Price Text Styling */
+.price-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #222; /* Darker Gray for Elegance */
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-family: "Poppins", sans-serif; /* Clean & Modern Font */
+}
+
+/* Price Tiers */
+.daily-price, .monthly-price {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #1b5e20; /* Deep Forest Green */
+  transition: all 0.3s ease-in-out;
+  font-family: "Merriweather", serif; /* Adds a Premium Feel */
+}
+
+.daily-price:hover, .monthly-price:hover {
+  color: #43a047; /* Brighter Green on Hover */
+  text-shadow: 0px 0px 6px rgba(67, 160, 71, 0.4);
+  transform: scale(1.02);
+}
+
+/* Animated Highlight Line */
+.highlight-line {
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #43a047, transparent);
+  border-radius: 3px;
+  animation: highlight 1.8s infinite ease-in-out;
+}
+
+@keyframes highlight {
+  0% { width: 30%; opacity: 0.5; }
+  50% { width: 60%; opacity: 1; }
+  100% { width: 30%; opacity: 0.5; }
+}
+
+/* Price Highlight (for ₹ amounts) */
+.price-highlight {
+  color: #c49b16; /* Rich Gold */
+  font-weight: 600;
+  font-size: 1.4rem;
 }
