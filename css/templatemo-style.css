@@ -126,15 +126,15 @@ html {
 }
 
 .tm-btn-default {
-  border: 1px solid #ccc;
+  border: 1px solid #2F956D;
   background-color: transparent;
-  color: #626364;
+  color: #2F956D;
 }
 
 .tm-btn-default:hover,
 .tm-btn-default:focus {
   color: white;
-  background-color: #98999A;
+  background-color: #2F956D;
 }
 
 .tm-btn-primary {
@@ -318,7 +318,7 @@ p, address {
 }
 
 .tm-welcome-section {
-  margin: 100px auto;
+  margin: 40px auto 20px;
   max-width: 655px;
   line-height: 1.8;
 }
@@ -856,6 +856,7 @@ address {
 .panel p {
   padding: 5px 20px 30px;
 }
+
 .calendar-section {
   background: linear-gradient(to bottom, #f9fbfc, #e7eef3);
   padding: 30px;
@@ -864,6 +865,7 @@ address {
   box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease-in-out;
+  overflow: auto; /* Enables both horizontal & vertical scrolling */
 }
 
 .calendar-section:hover {
@@ -999,7 +1001,7 @@ address {
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
   width: fit-content;
-  margin: 20px auto 30px; /* Added Bottom Space */
+  margin: 40px auto 20px;
   position: relative;
   transition: all 0.3s ease-in-out;
 }
