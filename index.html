@@ -90,43 +90,77 @@
         </div>
     </section>
 
-    <section class="specials">
-        <div style="margin-top: 30px; text-align: center;">
-            <h3>Specials for Ramadan</h3>
-            <p>Enjoy our Iftar Kit for <span class="price-highlight">₹240</span> and Suhoor Special for <span class="price-highlight">₹130</span>.</p>
+    <section class="ramadan-specials">
+        <div class="video-overlay">
+            <video autoplay muted loop playsinline class="ramadan-video">
+                <source src="videos/ramadan.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay-content"></div>
+        </div>
+    
+        <div class="specials-content">
+            <div class="specials-header">
+                <h2 class="ramadan-title">Ramadan Delights</h2>
+                <p class="ramadan-subtitle">Nourish your soul and body during this blessed month.</p>
+            </div>
+    
+            <div class="specials-items">
+                <div class="special-item iftar">
+                    <div class="item-content">
+                        <h3 class="item-title">Iftar Feast</h3>
+                        <p class="item-description">A fulfilling meal to break your fast with traditional flavors.</p>
+                        <span class="item-price">₹300</span>
+                    </div>
+                </div>
+    
+                <div class="special-item suhoor">
+                    <div class="item-content">
+                        <h3 class="item-title">Suhoor Sunrise</h3>
+                        <p class="item-description">Energize your day with a wholesome and light meal.</p>
+                        <span class="item-price">₹130</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-    <section class="preorder-section" id="preorder-meals">
+    
+    <section class="preorder-card-section" id="preorder-meals">
         <div class="container">
-            <div class="section-title">
-                <h2>Pre-Order a Meal</h2>
-                <p>One fresh meal, just for you. No waste, no extra charges—just great food at the perfect price.</p>
-            </div>
-    
-            <div class="preorder-meal-options">
-                <div class="preorder-meal-card">
-                    <h4>Meal</h4>
-                    <p class="preorder-price">₹100</p>
-                    <p>Wholesome, nutritious, and packed with flavor.</p>
+            <div class="preorder-card">
+                <div class="card-image">
+                    <img src="img/thali.jpg" alt="Delicious Meal">
                 </div>
+                <div class="card-content">
+                    <div class="section-title">
+                        <h2>Pre-Order a Meal</h2>
+                        <p>One fresh meal, just for you. No waste, no extra charges—just great food at the perfect price.</p>
+                    </div>
     
-                <div class="preorder-meal-card">
-                    <h4>Super Meal</h4>
-                    <p class="preorder-price">₹130</p>
-                    <p>Hearty, protein-rich, and absolutely delicious.</p>
+                    <div class="preorder-meal-options">
+                        <div class="meal-option">
+                            <h4>Meal</h4>
+                            <span class="price">₹100</span>
+                            <p>Wholesome, nutritious, and flavorful.</p>
+                        </div>
+                        <div class="meal-option">
+                            <h4>Super Meal</h4>
+                            <span class="price">₹130</span>
+                            <p>Hearty, protein-rich, and delicious.</p>
+                        </div>
+                    </div>
+    
+                    <div class="preorder-details">
+                        <h3>Why Pre-Order?</h3>
+                        <p>We source fresh ingredients based on pre-orders, ensuring quality and reducing waste.</p>
+    
+                        <h3>How It Works</h3>
+                        <p>Pre-order, and we’ll make it fresh for you. No excess, no delay—just real food.</p>
+    
+                        <h3>Free Delivery, Always</h3>
+                        <p>No extra charges. Just good food, delivered fresh to your door.</p>
+                    </div>
                 </div>
-            </div>
-    
-            <div class="preorder-details">
-                <h3>Why Pre-Order?</h3>
-                <p>We source the freshest ingredients based on pre-orders, ensuring quality and reducing waste.</p>
-    
-                <h3>How It Works</h3>
-                <p>Pre-order your meal, and we’ll make it fresh just for you. No excess, no delay—just real food.</p>
-    
-                <h3>Free Delivery, Always</h3>
-                <p>🚚 No extra delivery charges. No hidden fees. Just good food, delivered fresh to your doorstep.</p>
             </div>
         </div>
     </section>
@@ -134,66 +168,70 @@
     
 
 
-    <section class="subscription" id="subscription">
+    <section class="subscription-plans" id="subscription">
         <div class="container">
             <div class="section-title">
                 <h2>Subscription Plans</h2>
-                <p>Have more for less with our monthly subscriptions</p>
+                <p>Tailored subscriptions designed to elevate your daily dining experience.</p>
             </div>
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <div class="pricing-header" style="background-color: #27ae60;">
-                        <h3 style="margin-bottom: 0;">Monthly Plan </h3>
-                        <div class="price">₹233<span class="price-period">/day</span></div>
+    
+            <div class="plan-cards">
+                <div class="plan-card monthly-plan">
+                    <div class="plan-header">
+                        <h3>Everyday</h3>
+                        <div class="plan-price">₹233<span class="price-unit">/day</span></div>
                     </div>
-                    <ul class="pricing-features">
-                        <li>3 meals per day</li>
-                        <li>Free delivery</li>
-                        <li>5 Non-Veg days, 2 Veg days</li>
-                        <li>Save ₹1,410 per month</li>
-                        <li>Monthly billing (₹6,990)</li>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-utensils"></i> Three Daily Feasts</li>
+                        <li><i class="fas fa-truck"></i> Complimentary Delivery</li>
+                        <li><i class="fas fa-drumstick-bite"></i> Five Non-Veg, Two Veg Days</li>
+                        <li><i class="fas fa-piggy-bank"></i> Monthly Savings of ₹1,410</li>
+                        <li><i class="fas fa-calendar-alt"></i> Total: ₹6,990</li>
                     </ul>
                 </div>
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Executive Plan</h3>
-                        <div class="price">₹260<span class="price-period">/day</span></div>
+    
+                <div class="plan-card executive-plan">
+                    <div class="plan-header">
+                        <h3>Executive</h3>
+                        <div class="plan-price">₹260<span class="price-unit">/day</span></div>
                     </div>
-                    <ul class="pricing-features">
-                        <li>3 meals per day (Weekdays)</li>
-                        <li>Free delivery</li>
-                        <li>3 Non-Veg days, 2 Veg days</li>
-                        <li>Perfect for working professionals</li>
-                        <li>Monthly billing (₹5,900)</li>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-utensils"></i> Weekday Triple Treat</li>
+                        <li><i class="fas fa-truck"></i> Free Doorstep Delivery</li>
+                        <li><i class="fas fa-drumstick-bite"></i> Three Non-Veg, Two Veg Days</li>
+                        <li><i class="fas fa-briefcase"></i> Perfect for Professionals</li>
+                        <li><i class="fas fa-calendar-alt"></i> Total: ₹5,900</li>
                     </ul>
                 </div>
             </div>
-
-            <div style="margin-top: 50px;">
-                <h3>Flexible Meal Plans</h3>
-                <p>We also offer customisable meal plans to suit your routine and needs. Our monthly plan includes 4/5 non-veg days and 2 veg days, while our weekly plan offers 3 non-veg days and 2 veg days.</p>
-                <div class="pricing-table">
+    
+            <div class="flexible-options">
+                <div class="options-header">
+                    <h3>Craft Your Custom Meal Experience</h3>
+                    <p>Choose the perfect blend of meals to fit your lifestyle.</p>
+                </div>
+                <div class="options-table">
                     <table>
                         <thead>
                             <tr>
-                                <th>Meal Options</th>
+                                <th>Meal Choices</th>
                                 <th>Everyday (Monthly)</th>
                                 <th>Executive (Weekdays)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>3 meals</td>
+                                <td>Three Meals</td>
                                 <td>₹6,990</td>
                                 <td>₹5,900</td>
                             </tr>
                             <tr>
-                                <td>2 meals (Lunch+Dinner)</td>
+                                <td>Two Meals (Lunch + Dinner)</td>
                                 <td>₹6,600</td>
                                 <td>₹4,900</td>
                             </tr>
                             <tr>
-                                <td>1 meal (Lunch/Dinner)</td>
+                                <td>One Meal (Lunch or Dinner)</td>
                                 <td>₹3,500</td>
                                 <td>₹2,999</td>
                             </tr>
@@ -201,82 +239,77 @@
                     </table>
                 </div>
             </div>
+            
         </div>
     </section>
 
     <section class="daily-combos" id="daily-combos">
-    <div class="container">
-        <div class="section-title">
-            <h2>Daily Combos</h2>
-            <p>Explore our planned combos for the entire day!</p>
-        </div>
-        <i class="scroll-arrow left fa fa-chevron-left"></i>
-        <div class="combo-categories">
-            <div class="combo-category">
-                <h3>Super Sunday Combo</h3>
-                <ul class="combo-list">
-                    <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>Keppa kanji + pickle</strong></li>
-                    <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Chicken Biryani + Raita + 1 boiled egg</strong></li>
-                    <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>3 Appam + Coconut Milk</strong></li>
-                </ul>
+        <div class="container">
+            <div class="section-title">
+                <h2>Daily Combos</h2>
+                <p>Explore our planned combos for the entire day!</p>
             </div>
-            <div class="combo-category">
-                <h3>Combo 1</h3>
-                <ul class="combo-list">
-                    <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>Rava Upma + Coconut Chutney</strong></li>
-                    <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Veg Meals (Combo 1)</strong></li>
-                    <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>Chola Poori + Channa Masala</strong></li>
-                </ul>
-            </div>
-
-            <div class="combo-category">
-                <h3>Combo 2</h3>
-                <ul class="combo-list">
-                    <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>3 Uthapam + Peanut chutney + Mint Chutney</strong></li>
-                    <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Rice + Chicken Gravy + Omelette</strong></li>
-                    <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>4 Chapathi + Dal Fry + 1 egg atho</strong></li>
-                </ul>
-            </div>
-
-            <div class="combo-category">
-                <h3>Combo 3</h3>
-                <ul class="combo-list">
-                    <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>Pongal + Sambhar + Coconut Chutney</strong></li>
-                    <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>4 Chapathi + Egg Gravy</strong></li>
-                    <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>4 Chapathi + Palak Panner</strong></li>
-                </ul>
-            </div>
-
-            <div class="combo-category">
-                <h3>Combo 4</h3>
-                <ul class="combo-list">
-                    <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>4 Idli + Sambhar + Tomato Chutney</strong></li>
-                    <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Ghee Rice + Blood Chicken/ Beef Gravy</strong></li>
-                    <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>Puttu + Meen Curry</strong></li>
-                </ul>
-            </div>
-
-            <div class="combo-category">
-                <h3>Combo 5</h3>
-                <ul class="combo-list">
-                    <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>3 Appam + Coconut Milk</strong></li>
-                    <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Meen Kolambu + Meen Fry</strong></li>
-                    <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>Idiyappam + Chicken Stew</strong></li>
-                </ul>
-            </div>
-
-            <div class="combo-category">
-                <h3>Combo 6</h3>
-                <ul class="combo-list">
-                    <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>4 Idli + Sambar + Onion Chutney</strong></li>
-                    <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Veg Meals (Combo 2)</strong></li>
-                    <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>4 Poori + Potato Kuruma + 3 Veg Kuruma</strong></li>
-                </ul>
+            <div class="combo-categories">
+                <div class="combo-category">
+                    <h3>Super Sunday Combo</h3>
+                    <ul class="combo-list">
+                        <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>Keppa Kanji + Pickle</strong></li>
+                        <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Chicken Biryani + Raita + 1 Boiled Egg</strong></li>
+                        <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>3 Appam + Coconut Milk</strong></li>
+                    </ul>
+                </div>
+                <div class="combo-category">
+                    <h3>Combo 1</h3>
+                    <ul class="combo-list">
+                        <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>Rava Upma + Coconut Chutney</strong></li>
+                        <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Veg Meals (Combo 1)</strong></li>
+                        <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>Chola Poori + Channa Masala</strong></li>
+                    </ul>
+                </div>
+                <div class="combo-category">
+                    <h3>Combo 2</h3>
+                    <ul class="combo-list">
+                        <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>3 Uthapam + Peanut Chutney + Mint Chutney</strong></li>
+                        <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Rice + Chicken Gravy + Omelette</strong></li>
+                        <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>4 Chapathi + Dal Fry + 1 Egg Atho</strong></li>
+                    </ul>
+                </div>
+                <div class="combo-category">
+                    <h3>Combo 3</h3>
+                    <ul class="combo-list">
+                        <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>Pongal + Sambhar + Coconut Chutney</strong></li>
+                        <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>4 Chapathi + Egg Gravy</strong></li>
+                        <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>4 Chapathi + Palak Panner</strong></li>
+                    </ul>
+                </div>
+                <div class="combo-category">
+                    <h3>Combo 4</h3>
+                    <ul class="combo-list">
+                        <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>4 Idli + Sambhar + Tomato Chutney</strong></li>
+                        <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Ghee Rice + Blood Chicken/ Beef Gravy</strong></li>
+                        <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>Puttu + Meen Curry</strong></li>
+                    </ul>
+                </div>
+                <div class="combo-category">
+                    <h3>Combo 5</h3>
+                    <ul class="combo-list">
+                        <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>3 Appam + Coconut Milk</strong></li>
+                        <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Meen Kolambu + Meen Fry</strong></li>
+                        <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>Idiyappam + Chicken Stew</strong></li>
+                    </ul>
+                </div>
+                <div class="combo-category">
+                    <h3>Combo 6</h3>
+                    <ul class="combo-list">
+                        <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>4 Idli + Sambar + Onion Chutney</strong></li>
+                        <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Veg Meals (Combo 2)</strong></li>
+                        <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>4 Poori + Potato Kuruma + 3 Veg Kuruma</strong></li>
+                    </ul>
+                </div>
             </div>
         </div>
-         <i class="scroll-arrow right fa fa-chevron-right"></i>
-    </div>
-</section>
+    </section>
+    
 
     <section class="testimonials">
         <div class="container">
@@ -288,7 +321,7 @@
                 <div class="testimonial-card">
                     <p class="testimonial-text">The food is absolutely delicious and reminds me of my mom's cooking. The delivery is always on time, and the portions are generous!</p>
                     <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Sharma">
+                        
                         <div class="author-info">
                             <h4>Rahul Sharma</h4>
                             <p>IT Professional, OMR</p>
@@ -298,7 +331,7 @@
                 <div class="testimonial-card">
                     <p class="testimonial-text">I've been ordering from Myna for the past month, and I'm impressed with the quality and taste. I can spend my evenings out of the kitchen now!</p>
                     <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Patel">
+                        
                         <div class="author-info">
                             <h4>Priya Patel</h4>
                             <p>Software Engineer, Chennai</p>
@@ -308,7 +341,7 @@
                 <div class="testimonial-card">
                     <p class="testimonial-text">The variety of options is amazing! I never get bored with their menu, and the food is always fresh and tasty. Their monthly subscription is a lifesaver!</p>
                     <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Amit Kumar">
+                        
                         <div class="author-info">
                             <h4>Amit Kumar</h4>
                             <p>Bank Manager, OMR Area</p>
@@ -325,9 +358,6 @@
             <p>Contact us to arrange a trial meal!</p>
             <p>We serve the Chennai OMR area with prompt, reliable delivery.</p>
             <a href="https://wa.me/+919995309066" target="_blank" class="btn trial-btn">Request a trial meal!</a>
-            <a href="/calendar.html" download class="btn btn-secondary menu-download-btn" style="">
-                <span style="margin-right: 8px;">📅</span>Download Monthly Menu
-            </a>
         </div>
     </section>
 
@@ -352,14 +382,13 @@
                     <h3>Contact Us</h3>
                     <p>Chennai OMR Area</p>
                     <p>Phone: <a href="tel:+919995309066">+91 99953 09066</a></p>
-                    <p>Email: <a href="mailto:myna.kitchen.omr@gmail.com">myna.kitchen.omr@gmail.com</a></p>
+                    <p>Email: <a href="mailto:kitchenmyna@gmail.com">myna.kitchen.omr@gmail.com</a></p>
                 </div>
                 <div class="footer-column">
                     <h3>Follow Us</h3>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/mynakitchhen/" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/+919995309066" class="social-link"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
