@@ -520,51 +520,82 @@ function hideItems(element) {
 
     // DAILY COMBOS SCROLL FUNCTIONALITY
     const dailyCombos = document.querySelector('.daily-combos .combo-categories');
-    const leftButton = document.querySelector('.daily-combos .scroll-button.left');
-    const rightButton = document.querySelector('.daily-combos .scroll-button.right');
+const leftButton = document.querySelector('.daily-combos .scroll-button.left');
+const rightButton = document.querySelector('.daily-combos .scroll-button.right');
 
-    if (dailyCombos && leftButton && rightButton) {
-        function updateScrollButtons() {
-            leftButton.disabled = dailyCombos.scrollLeft <= 0;
-            rightButton.disabled = dailyCombos.scrollLeft >= dailyCombos.scrollWidth - dailyCombos.clientWidth - 1;
+if (dailyCombos && leftButton && rightButton) {
+    function updateScrollButtons() {
+        leftButton.disabled = dailyCombos.scrollLeft <= 0;
+        rightButton.disabled = dailyCombos.scrollLeft >= dailyCombos.scrollWidth - dailyCombos.clientWidth - 1;
+    }
+
+    updateScrollButtons();
+    dailyCombos.addEventListener('scroll', updateScrollButtons);
+
+    const comboCategory = document.querySelector('.daily-combos .combo-category');
+    const comboCategoryWidth = comboCategory.offsetWidth + 20; // 20px is the gap
+    const adjustedWidth = comboCategoryWidth * 0.95; // Reduce by 5%
+
+    const scrollSmooth = { behavior: 'smooth' };
+
+    leftButton.addEventListener('click', () => {
+        dailyCombos.scrollBy({ left: -adjustedWidth, ...scrollSmooth });
+        updateScrollButtons();
+    });
+
+    rightButton.addEventListener('click', () => {
+        dailyCombos.scrollBy({ left: adjustedWidth, ...scrollSmooth });
+        updateScrollButtons();
+    });
+
+    // DRAG SCROLL FOR MOBILE
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
+    let velocity = 0;
+    let lastX = 0;
+    let animationFrameId;
+
+    dailyCombos.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        startX = e.touches[0].pageX - dailyCombos.offsetLeft;
+        scrollLeft = dailyCombos.scrollLeft;
+        lastX = e.touches[0].pageX;
+        velocity = 0;
+        cancelAnimationFrame(animationFrameId);
+    });
+
+    dailyCombos.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - dailyCombos.offsetLeft;
+        const walk = (x - startX) * 1.2;
+        dailyCombos.scrollLeft = scrollLeft - walk;
+        velocity = e.touches[0].pageX - lastX;
+        lastX = e.touches[0].pageX;
+        updateScrollButtons();
+    });
+
+    dailyCombos.addEventListener('touchend', () => {
+        isDragging = false;
+        if (velocity !== 0) {
+            animateMomentum();
+        }
+    });
+
+    function animateMomentum() {
+        if (Math.abs(velocity) < 0.1) {
+            velocity = 0;
+            return;
         }
 
+        dailyCombos.scrollLeft -= velocity;
+        velocity *= 0.95;
         updateScrollButtons();
-        dailyCombos.addEventListener('scroll', updateScrollButtons);
 
-        leftButton.addEventListener('click', () => {
-            dailyCombos.scrollLeft -= 340;
-            updateScrollButtons();
-        });
-
-        rightButton.addEventListener('click', () => {
-            dailyCombos.scrollLeft += 340;
-            updateScrollButtons();
-        });
-
-        // DRAG SCROLL FOR MOBILE
-        let isDragging = false;
-        let startX;
-        let scrollLeft;
-
-        dailyCombos.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            startX = e.touches[0].pageX - dailyCombos.offsetLeft;
-            scrollLeft = dailyCombos.scrollLeft;
-        });
-
-        dailyCombos.addEventListener('touchmove', (e) => {
-            if (!isDragging) return;
-            const x = e.touches[0].pageX - dailyCombos.offsetLeft;
-            const walk = (x - startX) * 2;
-            dailyCombos.scrollLeft = scrollLeft - walk;
-            updateScrollButtons();
-        });
-
-        dailyCombos.addEventListener('touchend', () => {
-            isDragging = false;
-        });
+        animationFrameId = requestAnimationFrame(animateMomentum);
     }
+}
 
     // MOBILE MENU TOGGLE
     const menuToggle = document.getElementById('menuToggle');

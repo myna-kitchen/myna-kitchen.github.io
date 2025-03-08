@@ -1001,25 +1001,30 @@ body {
 }
 
 @media (max-width: 768px) {
+  .daily-combos .container {
+      width: 100%; /* Full width on mobile */
+      max-width: none; /* Remove max-width on mobile */
+  }
+
   .daily-combos .combo-categories {
-    gap: 10px;
-    padding-left: 5px; /* Reduced padding */
-    padding-right: 5px; /* Reduced padding */
+      gap: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
   }
 
   .daily-combos .combo-category {
-    padding: 15px;
-    flex: 0 0 calc(100% - 30px); /* Adjusted width */
-    min-width: calc(100% - 30px); /* Added min-width */
-    box-sizing: border-box; /* Ensures padding and border are included in width */
+      padding: 15px;
+      flex: 0 0 calc(100% - 30px);
+      min-width: calc(100% - 30px);
+      box-sizing: border-box;
   }
 
   .daily-combos .section-title h2 {
-    font-size: 2em;
+      font-size: 2em;
   }
 
   .daily-combos .section-title p {
-    font-size: 1em;
+      font-size: 1em;
   }
 }
 
