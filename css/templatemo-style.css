@@ -1344,6 +1344,13 @@ footer {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .preorder-card-section {
+    padding: 0px 0px;  
+  }
+}
+
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   .features {
