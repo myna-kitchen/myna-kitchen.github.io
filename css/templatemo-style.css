@@ -1017,10 +1017,38 @@ body {
   }
 
   .daily-combos .combo-category {
-      padding: 15px;
-      flex: 0 0 calc(100% - 30px);
+      padding: 10px;
+      flex: 0 0 calc(100% - 20px);
       min-width: calc(100% - 30px);
       box-sizing: border-box;
+      min-height: auto; /* Allow height to adjust based on content */
+      padding-bottom: 0;
+  }
+
+  /* Adjust font sizes for better compactness on mobile */
+  .daily-combos .combo-category h3 {
+    font-size: 1.1em; /* Reduce heading size */
+    margin-bottom: 8px; /* Reduce margin */
+  }
+
+  .daily-combos .combo-meal {
+    margin-bottom: 8px; /* Reduce margin between meals */
+    padding: 6px; /* Reduce padding */
+  }
+
+  .daily-combos .combo-meal__title {
+    font-size: 0.95em; /* Reduce title size */
+    margin-bottom: 3px; /* Reduce margin */
+  }
+
+  .daily-combos .combo-meal__item {
+    font-size: 0.85em; /* Reduce item size */
+  }
+
+  /* Adjust scroll button size for mobile */
+  .daily-combos .scroll-button {
+    padding: 8px; /* Reduce padding */
+    font-size: 1.1em; /* Reduce icon size */
   }
 
   .daily-combos .section-title h2 {
@@ -1030,6 +1058,17 @@ body {
   .daily-combos .section-title p {
       font-size: 1em;
   }
+
+  /* Optional: Adjust arrow color for better visibility */
+  .daily-combos .scroll-button {
+    color: #AAD15F; /* Use a color that contrasts with the background */
+  }
+
+  /* Optional: Add a semi-transparent background on hover for better UX */
+  .daily-combos .scroll-button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  }
+
 }
 
 /* Testimonials Section */
