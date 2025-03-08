@@ -377,7 +377,7 @@ nav .btn-try-a-meal:hover {
   background-color: #AAD15F; /* Yellow background for announcement feel */
   color: #333; /* Dark text for contrast */
   padding: 15px 35px; /* Even more padding */
-  border-radius: 40px; /* More rounded corners */
+  border-radius: 5px; /* More rounded corners */
   font-size: 1.3em; /* Larger font size */
   font-weight: 700; /* Extra bold font */
   text-transform: uppercase;
