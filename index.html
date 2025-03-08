@@ -19,40 +19,66 @@
   gtag('js', new Date());
 
   gtag('config', 'G-4NPEG3WVTP');
+  function showItems(element) {
+    element.classList.add('show-items');
+}
+
+function hideItems(element) {
+    element.classList.remove('show-items');
+}
+
 </script>
 <body>
-    <header>
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <span class="logo-icon">🍲</span> Myna<span> Kitchen</span>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <span class="brand-icon">🍲</span> <span class="brand-myna">Myna </span><span> Kitchen</span>
             </a>
             <nav>
-                <ul>
+                <div class="menu-toggle" id="menuToggle">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="nav-menu-mobile" id="navMenuMobile">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#daily-combos">Daily Combos</a></li>
                     <li><a href="#subscription">Subscriptions</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#trial" class="cta-button">Try a Meal</a></li>
+                </ul>
+                <ul class="nav-menu-desktop">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#daily-combos">Daily Combos</a></li>
+                    <li><a href="#subscription">Subscriptions</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#trial" class="cta-button">Try a Meal</a></li>
                 </ul>
             </nav>
-            <a href="#trial" class="btn">Try a Meal</a>
         </div>
     </header>
+    
+    
 
-    <section class="hero" id="home">
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="videos/salt-seasoning.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="container">
-            <div class="hero-content">
-                <div class="free-delivery-badge">FREE DELIVERY</div>
-                <div class="tagline">We've got your meals sorted.</div>
-                <h1>Homely meals, delivered with love</h1>
-                <p>Feel like home, eat enough, eat healthy. Never repeat your food with our diverse combo options.</p>
-                <div class="btn-group">
-                    <a href="#daily-combos" class="btn">Explore Combos</a>
-                    <a href="#subscription" class="btn btn-secondary">View Subscriptions</a>
+    <section class="hero-section" id="home">
+        <div class="hero-section__video-wrapper">
+            <video autoplay muted loop playsinline class="hero-section__video">
+                <source src="videos/chef-prep.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-section__video-overlay"></div>
+        </div>
+        <div class="hero-section__content-container">
+            <div class="hero-section__content">
+                <div class="hero-section__free-delivery-badge">FREE DELIVERY</div>
+                <div class="hero-section__tagline">We've got your meals sorted.</div>
+                <h1 class="hero-section__title">Homely meals, delivered with love</h1>
+                <p class="hero-section__description">Feel like home, eat enough, eat healthy. Never repeat your food with our diverse combo options.</p>
+                <div class="hero-section__button-group">
+                    <a href="#daily-combos" class="hero-section__button hero-section__button--primary">Explore Combos</a>
+                    <a href="#subscription" class="hero-section__button hero-section__button--secondary">View Subscriptions</a>
                 </div>
             </div>
         </div>
@@ -85,41 +111,6 @@
                     <div class="feature-icon">🍽️</div>
                     <h3>South Indian</h3>
                     <p>Authentic South Indian meals, prepared just 1 hour before delivery.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="ramadan-specials">
-        <div class="video-overlay">
-            <video autoplay muted loop playsinline class="ramadan-video">
-                <source src="videos/ramadan.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="video-overlay-content"></div>
-        </div>
-    
-        <div class="specials-content">
-            <div class="specials-header">
-                <h2 class="ramadan-title">Ramadan Delights</h2>
-                <p class="ramadan-subtitle">Nourish your soul and body during this blessed month.</p>
-            </div>
-    
-            <div class="specials-items">
-                <div class="special-item iftar">
-                    <div class="item-content">
-                        <h3 class="item-title">Iftar Feast</h3>
-                        <p class="item-description">A fulfilling meal to break your fast with traditional flavors.</p>
-                        <span class="item-price">₹300</span>
-                    </div>
-                </div>
-    
-                <div class="special-item suhoor">
-                    <div class="item-content">
-                        <h3 class="item-title">Suhoor Sunrise</h3>
-                        <p class="item-description">Energize your day with a wholesome and light meal.</p>
-                        <span class="item-price">₹130</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -243,69 +234,166 @@
         </div>
     </section>
 
+    <section class="ramadan-specials">
+        <div class="video-overlay">
+            <video autoplay muted loop playsinline class="ramadan-video">
+                <source src="videos/ramadan.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay-content">
+                <div class="specials-content">
+                    <div class="specials-header">
+                        <h2 class="ramadan-title">Ramadan Delights</h2>
+                        <p class="ramadan-subtitle">
+                            
+                            <span class="highlighted">Nourish your soul and body during this  blessed month.</span>
+                        </p>
+                    </div>
+    
+                    <div class="specials-items">
+                        <div class="special-item iftar" onmouseover="showItems(this)" onmouseout="hideItems(this)">
+                            <div class="item-content">
+                                <h3 class="item-title">Iftar Feast</h3>
+                                <p class="item-description">A fulfilling meal to break your fast with traditional flavors.</p>
+                                <span class="item-price">₹300</span>
+                            </div>
+                            <div class="additional-items">
+                                <p>Dates, Cut Fruits, Ru Afza, Samosas, Biriyani</p>
+                            </div>
+                        </div>
+    
+                        <div class="special-item suhoor" onmouseover="showItems(this)" onmouseout="hideItems(this)">
+                            <div class="item-content">
+                                <h3 class="item-title">Suhoor Delight</h3>
+                                <p class="item-description">Energize your day with a wholesome and light meal.</p>
+                                <span class="item-price">₹130</span>
+                            </div>
+                            <div class="additional-items">
+                                <p>Super Meal of the day</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="daily-combos" id="daily-combos">
         <div class="container">
             <div class="section-title">
                 <h2>Daily Combos</h2>
                 <p>Explore our planned combos for the entire day!</p>
             </div>
-            <div class="combo-categories">
-                <div class="combo-category">
-                    <h3>Super Sunday Combo</h3>
-                    <ul class="combo-list">
-                        <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>Keppa Kanji + Pickle</strong></li>
-                        <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Chicken Biryani + Raita + 1 Boiled Egg</strong></li>
-                        <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>3 Appam + Coconut Milk</strong></li>
-                    </ul>
+            <div class="combo-categories-wrapper">
+                <button class="scroll-button left">❮</button>
+                <div class="combo-categories">
+                    <div class="combo-category">
+                        <h3>Super Sunday Combo</h3>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Breakfast</h4>
+                            <p class="combo-meal__item">Keppa Kanji + Pickle</p>
+                        </div>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Lunch</h4>
+                            <p class="combo-meal__item">Chicken Biryani + Raita + 1 Boiled Egg</p>
+                        </div>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Dinner</h4>
+                            <p class="combo-meal__item">3 Appam + Coconut Milk</p>
+                        </div>
+                    </div>
+                    <div class="combo-category">
+                        <h3>Combo 1</h3>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Breakfast</h4>
+                            <p class="combo-meal__item">Rava Upma + Coconut Chutney</p>
+                        </div>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Lunch</h4>
+                            <p class="combo-meal__item">Veg Meals (Combo 1)</p>
+                        </div>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Dinner</h4>
+                            <p class="combo-meal__item">Chola Poori + Channa Masala</p>
+                        </div>
+                    </div>
+                    <div class="combo-category">
+                        <h3>Combo 2</h3>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Breakfast</h4>
+                            <p class="combo-meal__item">3 Uthapam + Peanut Chutney + Mint Chutney</p>
+                        </div>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Lunch</h4>
+                            <p class="combo-meal__item">Rice + Chicken Gravy + Omelette</p>
+                        </div>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Dinner</h4>
+                            <p class="combo-meal__item">4 Chapathi + Dal Fry + 1 Egg Atho</p>
+                        </div>
+                    </div>
+                    <div class="combo-category">
+                        <h3>Combo 3</h3>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Breakfast</h4>
+                            <p class="combo-meal__item">Pongal + Sambhar + Coconut Chutney</p>
+                        </div>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Lunch</h4>
+                            <p class="combo-meal__item">4 Chapathi + Egg Gravy</p>
+                        </div>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Dinner</h4>
+                            <p class="combo-meal__item">4 Chapathi + Palak Panner</p>
+                        </div>
+                    </div>
+                    <div class="combo-category">
+                        <h3>Combo 4</h3>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Breakfast</h4>
+                            <p class="combo-meal__item">4 Idli + Sambhar + Tomato Chutney</p>
+                        </div>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Lunch</h4>
+                            <p class="combo-meal__item">Ghee Rice + Blood Chicken/ Beef Gravy</p>
+                        </div>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Dinner</h4>
+                            <p class="combo-meal__item">Puttu + Meen Curry</p>
+                        </div>
+                    </div>
+                    <div class="combo-category">
+                        <h3>Combo 5</h3>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Breakfast</h4>
+                            <p class="combo-meal__item">3 Appam + Coconut Milk</p>
+                        </div>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Lunch</h4>
+                            <p class="combo-meal__item">Meen Kolambu + Meen Fry</p>
+                        </div>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Dinner</h4>
+                            <p class="combo-meal__item">Idiyappam + Chicken Stew</p>
+                        </div>
+                    </div>
+                    <div class="combo-category">
+                        <h3>Combo 6</h3>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Breakfast</h4>
+                            <p class="combo-meal__item">4 Idli + Sambar + Onion Chutney</p>
+                        </div>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Lunch</h4>
+                            <p class="combo-meal__item">Veg Meals (Combo 2)</p>
+                        </div>
+                        <div class="combo-meal">
+                            <h4 class="combo-meal__title">Dinner</h4>
+                            <p class="combo-meal__item">4 Poori + Potato Kuruma + 3 Veg Kuruma</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="combo-category">
-                    <h3>Combo 1</h3>
-                    <ul class="combo-list">
-                        <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>Rava Upma + Coconut Chutney</strong></li>
-                        <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Veg Meals (Combo 1)</strong></li>
-                        <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>Chola Poori + Channa Masala</strong></li>
-                    </ul>
-                </div>
-                <div class="combo-category">
-                    <h3>Combo 2</h3>
-                    <ul class="combo-list">
-                        <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>3 Uthapam + Peanut Chutney + Mint Chutney</strong></li>
-                        <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Rice + Chicken Gravy + Omelette</strong></li>
-                        <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>4 Chapathi + Dal Fry + 1 Egg Atho</strong></li>
-                    </ul>
-                </div>
-                <div class="combo-category">
-                    <h3>Combo 3</h3>
-                    <ul class="combo-list">
-                        <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>Pongal + Sambhar + Coconut Chutney</strong></li>
-                        <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>4 Chapathi + Egg Gravy</strong></li>
-                        <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>4 Chapathi + Palak Panner</strong></li>
-                    </ul>
-                </div>
-                <div class="combo-category">
-                    <h3>Combo 4</h3>
-                    <ul class="combo-list">
-                        <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>4 Idli + Sambhar + Tomato Chutney</strong></li>
-                        <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Ghee Rice + Blood Chicken/ Beef Gravy</strong></li>
-                        <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>Puttu + Meen Curry</strong></li>
-                    </ul>
-                </div>
-                <div class="combo-category">
-                    <h3>Combo 5</h3>
-                    <ul class="combo-list">
-                        <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>3 Appam + Coconut Milk</strong></li>
-                        <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Meen Kolambu + Meen Fry</strong></li>
-                        <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>Idiyappam + Chicken Stew</strong></li>
-                    </ul>
-                </div>
-                <div class="combo-category">
-                    <h3>Combo 6</h3>
-                    <ul class="combo-list">
-                        <li class="combo-item"><span class="combo-meal-type">Breakfast:</span><strong>4 Idli + Sambar + Onion Chutney</strong></li>
-                        <li class="combo-item"><span class="combo-meal-type">Lunch:</span><strong>Veg Meals (Combo 2)</strong></li>
-                        <li class="combo-item"><span class="combo-meal-type">Dinner:</span><strong>4 Poori + Potato Kuruma + 3 Veg Kuruma</strong></li>
-                    </ul>
-                </div>
+                <button class="scroll-button right">❯</button>
             </div>
         </div>
     </section>
@@ -398,19 +486,94 @@
         </div>
     </footer>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const comboCategories = document.querySelector('.combo-categories');
-            const scrollLeftButton = document.querySelector('.scroll-arrow.left');
-            const scrollRightButton = document.querySelector('.scroll-arrow.right');
+        
 
-            scrollLeftButton.addEventListener('click', () => {
-                comboCategories.scrollLeft -= 300; // Adjust scroll amount as needed
-            });
+        document.addEventListener('DOMContentLoaded', function () {
+    // SCROLLING FUNCTIONALITY
+    const comboCategories = document.querySelector('.combo-categories');
+    const scrollLeftButton = document.querySelector('.scroll-arrow.left');
+    const scrollRightButton = document.querySelector('.scroll-arrow.right');
 
-            scrollRightButton.addEventListener('click', () => {
-                comboCategories.scrollLeft += 300; // Adjust scroll amount as needed
-            });
+    if (comboCategories && scrollLeftButton && scrollRightButton) {
+        scrollLeftButton.addEventListener('click', () => {
+            comboCategories.scrollLeft -= 300;
         });
+
+        scrollRightButton.addEventListener('click', () => {
+            comboCategories.scrollLeft += 300;
+        });
+    }
+
+    // HAMBURGER MENU FUNCTIONALITY
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', function () {
+            mobileMenu.classList.toggle('active');
+        });
+    }
+
+    // DAILY COMBOS SCROLL FUNCTIONALITY
+    const dailyCombos = document.querySelector('.daily-combos .combo-categories');
+    const leftButton = document.querySelector('.daily-combos .scroll-button.left');
+    const rightButton = document.querySelector('.daily-combos .scroll-button.right');
+
+    if (dailyCombos && leftButton && rightButton) {
+        function updateScrollButtons() {
+            leftButton.disabled = dailyCombos.scrollLeft <= 0;
+            rightButton.disabled = dailyCombos.scrollLeft >= dailyCombos.scrollWidth - dailyCombos.clientWidth - 1;
+        }
+
+        updateScrollButtons();
+        dailyCombos.addEventListener('scroll', updateScrollButtons);
+
+        leftButton.addEventListener('click', () => {
+            dailyCombos.scrollLeft -= 340;
+            updateScrollButtons();
+        });
+
+        rightButton.addEventListener('click', () => {
+            dailyCombos.scrollLeft += 340;
+            updateScrollButtons();
+        });
+
+        // DRAG SCROLL FOR MOBILE
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
+
+        dailyCombos.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].pageX - dailyCombos.offsetLeft;
+            scrollLeft = dailyCombos.scrollLeft;
+        });
+
+        dailyCombos.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const x = e.touches[0].pageX - dailyCombos.offsetLeft;
+            const walk = (x - startX) * 2;
+            dailyCombos.scrollLeft = scrollLeft - walk;
+            updateScrollButtons();
+        });
+
+        dailyCombos.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+    }
+
+    // MOBILE MENU TOGGLE
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenuMobile = document.getElementById('navMenuMobile');
+
+    if (menuToggle && navMenuMobile) {
+        menuToggle.addEventListener('click', function () {
+            navMenuMobile.classList.toggle('active');
+        });
+    }
+});
+
+
 
     </script>
 </body>
