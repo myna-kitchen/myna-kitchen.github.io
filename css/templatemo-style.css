@@ -1662,4 +1662,31 @@ tbody tr:hover {
   .footer-link:hover {
       color: #e63946; /* Change color on hover */
   }
+  /* Mobile Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr; /* Stack columns vertically on mobile */
+      gap: 20px; /* Reduce gap between columns */
+    }
+
+    .footer-column {
+      text-align: center; /* Center-align text for mobile */
+    }
+
+    .social-links {
+      justify-content: center; /* Center-align social icons */
+    }
+
+    .footer-column ul li a {
+      color: #aaa; /* Change link color to white for better readability */
+    }
+
+    .footer-column ul li a:hover {
+      color: var(--accent); /* Hover color for links */
+    }
+
+    .copyright {
+      font-size: 12px; /* Slightly smaller font size for mobile */
+    }
+  }
 } 
