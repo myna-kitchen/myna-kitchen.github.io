@@ -1653,4 +1653,13 @@ tbody tr:hover {
   .ramadan-title, .ramadan-subtitle, .item-title, .item-description, .item-price {
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   }
-}
+
+  .footer-link {
+    color: #AAD15F; /* Set link color to white */
+    text-decoration: none; /* Remove underline */
+  }
+
+  .footer-link:hover {
+      color: #e63946; /* Change color on hover */
+  }
+} 
