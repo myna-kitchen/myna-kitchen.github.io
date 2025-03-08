@@ -1305,6 +1305,31 @@ footer {
   margin: 0 auto;
 }
 
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .features {
+    margin-bottom: 0; /* Reduce gap by half on mobile */
+  }
+
+  .preorder-card-section {
+    padding-top: 0; /* Reduce gap by half on mobile */
+  }
+
+  .testimonials {
+    padding-top: 0px; 
+    padding-bottom: 10px;
+  }
+
+  .trial {
+    padding-top: 10px; 
+    padding-bottom: 5px;
+  }
+
+  .contact {
+    padding-top: 5px; 
+  }
+}
+
 .card-image {
   flex: 1;
   overflow: hidden;
@@ -1656,7 +1681,6 @@ tbody tr:hover {
 
   .footer-link {
     color: #AAD15F; /* Set link color to white */
-    text-decoration: none; /* Remove underline */
   }
 
   .footer-link:hover {
