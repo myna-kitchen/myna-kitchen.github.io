@@ -601,11 +601,21 @@ if (dailyCombos && leftButton && rightButton) {
     const menuToggle = document.getElementById('menuToggle');
     const navMenuMobile = document.getElementById('navMenuMobile');
 
-    if (menuToggle && navMenuMobile) {
-        menuToggle.addEventListener('click', function () {
-            navMenuMobile.classList.toggle('active');
+    menuToggle.addEventListener('click', function() {
+        navMenuMobile.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+    
+    // Close menu when clicking menu links
+    const mobileLinks = navMenuMobile.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navMenuMobile.classList.remove('active');
+            menuToggle.classList.remove('active');
+            document.body.classList.remove('menu-open');
         });
-    }
+    });
 });
 
 

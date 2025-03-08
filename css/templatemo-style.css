@@ -149,17 +149,20 @@ body {
 /* Mobile Menu (Hidden by default) */
 .nav-menu-mobile {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 60px;
+  left: 0;
   right: 0;
   width: 100%;
-  max-width: 300px;
+  height: 100vh;
+  margin: 0;
   background: white;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   list-style: none;
   flex-direction: column;
-  text-align: center;
-  padding: 15px 0;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
 }
 
 .nav-menu-mobile li {
@@ -169,9 +172,10 @@ body {
 .nav-menu-mobile li a {
   text-decoration: none;
   color: #333;
-  font-size: 1rem;
+  font-size: 1.3rem;
   display: block;
   transition: 0.3s;
+  padding: 10px 20px;
 }
 
 .nav-menu-mobile li a:hover {
