@@ -149,20 +149,17 @@ body {
 /* Mobile Menu (Hidden by default) */
 .nav-menu-mobile {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 60px;
-  left: 0;
   right: 0;
   width: 100%;
-  height: 100vh;
-  margin: 0;
+  max-width: 300px;
   background: white;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   list-style: none;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s;
+  text-align: center;
+  padding: 15px 0;
 }
 
 .nav-menu-mobile li {
@@ -172,10 +169,9 @@ body {
 .nav-menu-mobile li a {
   text-decoration: none;
   color: #333;
-  font-size: 1.3rem;
+  font-size: 1rem;
   display: block;
   transition: 0.3s;
-  padding: 10px 20px;
 }
 
 .nav-menu-mobile li a:hover {
@@ -990,16 +986,33 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  padding: 15px; /* Increase padding for better touch */
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 1.2em;
   z-index: 10;
-  border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
+.daily-combos .scroll-button:hover {
+  background-color: #AAD15F;
+  color: white;
+}
+
+.daily-combos .scroll-button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+/* Fix scroll button positioning */
 .daily-combos .scroll-button.left {
   left: 0;
 }
@@ -1008,71 +1021,31 @@ body {
   right: 0;
 }
 
-@media (max-width: 768px) {
-  .daily-combos .container {
-      width: 100%; /* Full width on mobile */
-      max-width: none; /* Remove max-width on mobile */
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .video-overlay-content {
+      position: static;
+      flex-direction: column;
+      align-items: stretch;
   }
 
-  .daily-combos .combo-categories {
-      gap: 10px;
-      padding-left: 5px;
-      padding-right: 5px;
+  .ramadan-video {
+      width: 100%;
+      height: auto;
   }
 
-  .daily-combos .combo-category {
-      padding: 10px;
-      flex: 0 0 calc(100% - 20px);
-      min-width: calc(100% - 30px);
-      box-sizing: border-box;
-      min-height: auto; /* Allow height to adjust based on content */
-      padding-bottom: 0;
+  .specials-items {
+      width: 100%;
   }
 
-  /* Adjust font sizes for better compactness on mobile */
-  .daily-combos .combo-category h3 {
-    font-size: 1.1em; /* Reduce heading size */
-    margin-bottom: 8px; /* Reduce margin */
+  .special-item {
+      width: calc(100% - 20px);
+      padding: 15px;
   }
 
-  .daily-combos .combo-meal {
-    margin-bottom: 8px; /* Reduce margin between meals */
-    padding: 6px; /* Reduce padding */
+  .ramadan-title, .ramadan-subtitle, .item-title, .item-description, .item-price {
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   }
-
-  .daily-combos .combo-meal__title {
-    font-size: 0.95em; /* Reduce title size */
-    margin-bottom: 3px; /* Reduce margin */
-  }
-
-  .daily-combos .combo-meal__item {
-    font-size: 0.85em; /* Reduce item size */
-  }
-
-  /* Adjust scroll button size for mobile */
-  .daily-combos .scroll-button {
-    padding: 8px; /* Reduce padding */
-    font-size: 1.1em; /* Reduce icon size */
-  }
-
-  .daily-combos .section-title h2 {
-      font-size: 2em;
-  }
-
-  .daily-combos .section-title p {
-      font-size: 1em;
-  }
-
-  /* Optional: Adjust arrow color for better visibility */
-  .daily-combos .scroll-button {
-    color: #AAD15F; /* Use a color that contrasts with the background */
-  }
-
-  /* Optional: Add a semi-transparent background on hover for better UX */
-  .daily-combos .scroll-button:hover {
-    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
-  }
-
 }
 
 /* Testimonials Section */
@@ -1216,7 +1189,7 @@ footer {
 .copyright {
   text-align: center;
   padding-top: 20px;
-  border-top: 1px solid #AAD15F;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: #aaa;
   font-size: 14px;
 }
@@ -1346,38 +1319,6 @@ footer {
   overflow: hidden;
   max-width: 900px;
   margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  .preorder-card-section {
-    padding: 0px 0px;  
-  }
-}
-
-
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-  .features {
-    margin-bottom: 0; /* Reduce gap by half on mobile */
-  }
-
-  .preorder-card-section {
-    padding-top: 0; /* Reduce gap by half on mobile */
-  }
-
-  .testimonials {
-    padding-top: 0px; 
-    padding-bottom: 10px;
-  }
-
-  .trial {
-    padding-top: 10px; 
-    padding-bottom: 5px;
-  }
-
-  .contact {
-    padding-top: 5px; 
-  }
 }
 
 .card-image {
@@ -1728,39 +1669,129 @@ tbody tr:hover {
   .ramadan-title, .ramadan-subtitle, .item-title, .item-description, .item-price {
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   }
+}
 
-  .footer-link {
-    color: #AAD15F; /* Set link color to white */
+/* Prevent body scrolling when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Improve scroll button visibility on mobile */
+.daily-combos .scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1.2em;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.daily-combos .scroll-button:hover {
+  background-color: #AAD15F;
+  color: white;
+}
+
+.daily-combos .scroll-button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+/* Optimize for mobile touch interactions */
+@media (max-width: 768px) {
+  .daily-combos .scroll-button {
+    width: 36px;
+    height: 36px;
   }
-
-  .footer-link:hover {
-      color: #e63946; /* Change color on hover */
+  
+  /* Ensure mobile scrolling is smooth */
+  .daily-combos .combo-categories {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 15px;
   }
-  /* Mobile Responsive Footer */
-  @media (max-width: 768px) {
-    .footer-grid {
-      grid-template-columns: 1fr; /* Stack columns vertically on mobile */
-      gap: 20px; /* Reduce gap between columns */
-    }
-
-    .footer-column {
-      text-align: center; /* Center-align text for mobile */
-    }
-
-    .social-links {
-      justify-content: center; /* Center-align social icons */
-    }
-
-    .footer-column ul li a {
-      color: #aaa; /* Change link color to white for better readability */
-    }
-
-    .footer-column ul li a:hover {
-      color: var(--accent); /* Hover color for links */
-    }
-
-    .copyright {
-      font-size: 12px; /* Slightly smaller font size for mobile */
-    }
+  
+  .daily-combos .combo-category {
+    scroll-snap-align: start;
+    flex: 0 0 85%;
+    max-width: 300px;
   }
-} 
+  
+  /* Improved mobile menu styles */
+  .nav-menu-mobile {
+    top: 60px;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+  }
+  
+  .nav-menu-mobile.active {
+    transform: translateX(0);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Better tap targets for mobile */
+  .nav-menu-mobile li a {
+    padding: 15px;
+    display: block;
+  }
+}
+
+/* Optimize images for different screen sizes */
+@media (max-width: 576px) {
+  .card-image img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+}
+
+/* iOS-specific optimizations */
+.ios-device {
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+}
+
+.ios-device button,
+.ios-device a {
+  cursor: pointer; /* Ensure elements are tappable */
+}
+
+.ios-device .daily-combos .combo-categories {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* Ensure menu items have sufficient tap targets for mobile */
+@media (max-width: 768px) {
+  .nav-menu-mobile li a {
+    min-height: 44px; /* Apple's recommended minimum tap target size */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Improve tap area for scroll buttons */
+  .daily-combos .scroll-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Improve form elements on mobile */
+  input, 
+  select, 
+  textarea, 
+  button {
+    font-size: 16px; /* Prevent iOS zoom on focus */
+  }
+}
