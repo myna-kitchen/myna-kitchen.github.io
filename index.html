@@ -44,29 +44,72 @@ function hideItems(element) {
                     <div></div>
                     <div></div>
                 </div>
+                <!-- Mobile CTA button shown outside the menu -->
+                <a href="#preorder-meals" class="mobile-cta-button">Try a Meal</a>
                 <ul class="nav-menu-mobile" id="navMenuMobile">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#daily-combos">Daily Combos</a></li>
+                    <li><a href="#daily-combos">Daily Menu</a></li>
                     <li><a href="#subscription">Subscriptions</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#trial" class="cta-button">Try a Meal</a></li>
                 </ul>
                 <ul class="nav-menu-desktop">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#daily-combos">Daily Combos</a></li>
+                    <li><a href="#daily-combos">Daily Menu</a></li>
                     <li><a href="#subscription">Subscriptions</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#trial" class="cta-button">Try a Meal</a></li>
+                    <li><a href="#preorder-meals" class="cta-button">Try a Meal</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
+    <!-- Add styles for the mobile CTA button -->
+    <style>
+        .mobile-cta-button {
+            display: none;
+            background-color: #e67e22;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 14px;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-cta-button:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-cta-button {
+                display: inline-block;
+                margin-right: 15px;
+            }
+            
+            .nav-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            nav {
+                display: flex;
+                align-items: center;
+            }
+            
+            .menu-toggle {
+                margin-left: 10px;
+            }
+        }
+    </style>
     
-    
-
     <section class="hero-section" id="home">
         <div class="hero-section__video-wrapper">
             <video autoplay muted loop playsinline class="hero-section__video">
@@ -79,7 +122,7 @@ function hideItems(element) {
             <div class="hero-section__content">
                 <div class="hero-section__free-delivery-badge">FREE DELIVERY</div>
                 <div class="hero-section__tagline">Delicious Meals. Zero Hassle.</div>
-                <h1 class="hero-section__title">Food Sorted. Life's Sorted 5.</h1>
+                <h1 class="hero-section__title">Food Sorted. Life's Sorted.</h1>
                 <p class="hero-section__description">Feel like home. Eat more, eat healthy. Our food, your place.</p>
                 <div class="hero-section__button-group">
                     <a href="#daily-combos" class="hero-section__button hero-section__button--primary">Explore Combos</a>
@@ -116,46 +159,6 @@ function hideItems(element) {
                     <div class="feature-icon"><i class="fas fa-fire-flame-curved"></i></div>
                     <h3>Freshly Prepared Meals</h3>
                     <p>Cooked just one hour before delivery. No added preservatives. Just like home-cooked meals you love.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="preorder-card-section" id="preorder-meals">
-        <div class="container">
-            <div class="preorder-card">
-                <div class="card-image">
-                    <img src="img/thali.jpg" alt="Delicious Meal">
-                </div>
-                <div class="card-content">
-                    <div class="section-title">
-                        <h2>Choose Your Plan</h2>
-                        <p>Select what best fits your lifestyle</p>
-                    </div>
-    
-                    <div class="preorder-meal-options">
-                        <div class="meal-option">
-                            <h4>Meal</h4>
-                            <span class="price">₹100</span>
-                            <p>Wholesome, nutritious, and flavorful.</p>
-                        </div>
-                        <div class="meal-option">
-                            <h4>Super Meal</h4>
-                            <span class="price">₹130</span>
-                            <p>Hearty, protein-rich, and delicious.</p>
-                        </div>
-                    </div>
-    
-                    <div class="preorder-details">
-                        <h3>Why Pre-Order?</h3>
-                        <p>We source fresh ingredients based on pre-orders, ensuring quality and reducing waste.</p>
-    
-                        <h3>How It Works</h3>
-                        <p>Pre-order, and we’ll make it fresh for you. No excess, no delay—just real food.</p>
-    
-                        <h3>Free Delivery, Always</h3>
-                        <p>No extra charges. Just good food, delivered fresh to your door.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -236,44 +239,355 @@ function hideItems(element) {
                     <h3 style="color: black;">Monthly Packages</h3>
                     <p>Enjoy the flexibility of customizing your meal frequency. Reduce daily meal decisions and maintain a consistent, healthy diet.</p>
                 </div>
-                <!-- Table layout adjusted for meal-wise pricing -->
+                <!-- Table layout adjusted for meal-wise pricing with responsive styling -->
                 <div class="options-table" style="overflow-x: auto; margin-top: 25px;">
-                    <table style="width: 100%; table-layout: fixed; border-collapse: collapse; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">
+                    <table style="width: 100%; border-collapse: collapse; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">
                         <thead>
                             <tr style="background-color: #f8f8f8;">
-                                <th style="width: 40%; padding: 15px; text-align: center; border-bottom: 1px solid #eee;">SUBSCRIPTION TYPE</th>
-                                <th style="width: 20%; padding: 15px; text-align: center; border-bottom: 1px solid #eee;">ONE MEAL</th>
-                                <th style="width: 20%; padding: 15px; text-align: center; border-bottom: 1px solid #eee;">TWO MEALS</th>
-                                <th style="width: 20%; padding: 15px; text-align: center; border-bottom: 1px solid #eee;">THREE MEALS</th>
+                                <th style="padding: 15px 10px; text-align: left; border-bottom: 1px solid #eee;">SUBSCRIPTION TYPE</th>
+                                <th style="padding: 15px 5px; text-align: center; border-bottom: 1px solid #eee;">ONE MEAL</th>
+                                <th style="padding: 15px 5px; text-align: center; border-bottom: 1px solid #eee;">TWO MEALS</th>
+                                <th style="padding: 15px 5px; text-align: center; border-bottom: 1px solid #eee;">THREE MEALS</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="padding: 15px; border-bottom: 1px solid #eee;">
-                                    <div>Daily Plan (7 days a week)</div>
+                                <td style="padding: 15px 10px; border-bottom: 1px solid #eee;">
+                                    <div style="font-weight: 500;">Daily Plan (7 days a week)</div>
                                     <div style="font-size: 13px; color: #666; margin-top: 5px; font-style: italic;">We've got all your meals sorted. 24*7.</div>
                                 </td>
-                                <td style="padding: 15px; text-align: center; border-bottom: 1px solid #eee; font-weight: 500;">₹3,600</td>
-                                <td style="padding: 15px; text-align: center; border-bottom: 1px solid #eee; font-weight: 500;">₹6,600</td>
-                                <td style="padding: 15px; text-align: center; border-bottom: 1px solid #eee; font-weight: 500;">₹7,500</td>
+                                <td style="padding: 15px 5px; text-align: center; border-bottom: 1px solid #eee; font-weight: 500;">₹3,600</td>
+                                <td style="padding: 15px 5px; text-align: center; border-bottom: 1px solid #eee; font-weight: 500;">₹6,600</td>
+                                <td style="padding: 15px 5px; text-align: center; border-bottom: 1px solid #eee; font-weight: 500;">₹7,500</td>
                             </tr>
                             <tr>
-                                <td style="padding: 15px;">
-                                    <div>Weekday Plan (5 days a week)</div>
+                                <td style="padding: 15px 10px;">
+                                    <div style="font-weight: 500;">Weekday Plan (5 days a week)</div>
                                     <div style="font-size: 13px; color: #666; margin-top: 5px; font-style: italic;">Perfect for working professionals. Delivered to office or home.</div>
                                 </td>
-                                <td style="padding: 15px; text-align: center; font-weight: 500;">₹2,600</td>
-                                <td style="padding: 15px; text-align: center; font-weight: 500;">₹4,800</td>
-                                <td style="padding: 15px; text-align: center; font-weight: 500;">₹6,200</td>
+                                <td style="padding: 15px 5px; text-align: center; font-weight: 500;">₹2,600</td>
+                                <td style="padding: 15px 5px; text-align: center; font-weight: 500;">₹4,800</td>
+                                <td style="padding: 15px 5px; text-align: center; font-weight: 500;">₹6,200</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+                
+                <!-- Add responsive styling for the table -->
+                <style>
+                    /* Responsive styling for the subscription table */
+                    @media (max-width: 768px) {
+                        .options-table table {
+                            width: 100%;
+                            font-size: 14px;
+                        }
+                        
+                        .options-table th,
+                        .options-table td {
+                            padding: 10px 5px !important;
+                        }
+                        
+                        .options-table th:first-child,
+                        .options-table td:first-child {
+                            min-width: 120px;
+                        }
+                        
+                        /* Reduce container padding on mobile */
+                        .subscription-plans .container {
+                            padding-left: 10px !important;
+                            padding-right: 10px !important;
+                            width: 100% !important;
+                            max-width: 100% !important;
+                        }
+                        
+                        /* Fix alignment issues */
+                        .flexible-options {
+                            width: 100%;
+                            margin: 0 auto;
+                        }
+                    }
+                    
+                    @media (max-width: 480px) {
+                        .options-table table {
+                            font-size: 12px;
+                            width: 100%;
+                            margin: 0 auto;
+                        }
+                        
+                        .options-table th,
+                        .options-table td {
+                            padding: 8px 3px !important;
+                        }
+                        
+                        .options-table td:first-child div:first-child {
+                            font-size: 13px;
+                        }
+                        
+                        .options-table td:first-child div:last-child {
+                            font-size: 11px;
+                        }
+                        
+                        /* Smaller margins for very small screens */
+                        .subscription-plans .container {
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            overflow-x: hidden;
+                        }
+                        
+                        /* Full width table for small screens */
+                        .options-table {
+                            margin-left: 0;
+                            margin-right: 0;
+                            width: 100%;
+                            overflow-x: hidden;
+                        }
+                        
+                        /* Adjust header to match reduced margins */
+                        .options-header {
+                            padding-left: 5px;
+                            padding-right: 5px;
+                            text-align: center;
+                        }
+                        
+                        /* Center align table */
+                        .flexible-options {
+                            width: 100%;
+                            margin: 0 auto;
+                            padding: 0;
+                        }
+                        
+                        /* Fix container for entire site on mobile */
+                        .container {
+                            width: 100% !important;
+                            max-width: 100% !important;
+                            padding-left: 0 !important;
+                            padding-right: 0 !important;
+                        }
+                        
+                        /* Ensure text is centered properly */
+                        .section-title {
+                            padding: 0 10px;
+                        }
+                    }
+                </style>
             </div>
             
         </div>
     </section>
 
+    <section class="daily-combos" id="daily-combos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Daily Menu</h2>
+                <p>Never repeat a meal throughout the week!</p>
+            </div>
+            <div class="combo-categories-wrapper" style="position: relative; overflow: hidden; margin: 0 -10px; padding: 0 10px;">
+                <!-- Scroll button styling -->
+                <button class="scroll-button left" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; width: 40px; height: 40px; border-radius: 50%; border: none; background-color: rgba(255, 255, 255, 0.9); box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer; display: flex; justify-content: center; align-items: center; font-size: 18px; opacity: 0.8; transition: opacity 0.3s ease;">❮</button>
+                <div class="combo-categories" style="display: flex; overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding: 15px 5px; gap: 15px; scrollbar-width: none; -ms-overflow-style: none;">
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Sunday Special</h3>
+                        <div class="combo-meal" style="background-color: #d7e4bc; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Keppa Kanji + Pickle</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #c2d6a4; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Chicken Biryani + Raita + 1 Boiled Egg</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #afc98c; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Paniyaram + Chutney</p>
+                        </div>
+                    </div>
+                    <div class="combo-category">
+                        <h3>Monday</h3>
+                        <div class="combo-meal" style="background-color: #d7e4bc; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Idli + Sambar + Tomato Chutney </p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #c2d6a4; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Veg Meals (Combo 1)</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #afc98c; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Chola Poori + Channa Masala</p>
+                        </div>
+                    </div>
+                    <div class="combo-category">
+                        <h3>Tuesday</h3>
+                        <div class="combo-meal" style="background-color: #d7e4bc; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Uthapam + Peanut Chutney + Mint Chutney</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #c2d6a4; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Rice + Chicken Curry + Omelette</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #afc98c; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Chapathi + Dal Fry + 1 Egg Atho</p>
+                        </div>
+                    </div>
+                    <div class="combo-category">
+                        <h3>Wednesday</h3>
+                        <div class="combo-meal" style="background-color: #d7e4bc; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Pongal + Sambhar + Coconut Chutney</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #c2d6a4; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Chapathi + Egg Gravy</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #afc98c; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Puttu + Meen Curry</p>
+                        </div>
+                    </div>
+                    <div class="combo-category">
+                        <h3>Thursday</h3>
+                        <div class="combo-meal" style="background-color: #d7e4bc; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Idli + Sambhar + Tomato Chutney</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #c2d6a4; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Ghee Rice + Pepper Chicken</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #afc98c; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Poori + Potato Veg Kuruma</p>
+                        </div>
+                    </div>
+                    <div class="combo-category">
+                        <h3>Friday</h3>
+                        <div class="combo-meal" style="background-color: #d7e4bc; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Rava Upma + Coconut Chutney </p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #c2d6a4; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Rice + Dal Fry + Nethili Fry</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #afc98c; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Idiyappam + Chicken Stew</p>
+                        </div>
+                    </div>
+                    <div class="combo-category">
+                        <h3>Saturday</h3>
+                        <div class="combo-meal" style="background-color: #d7e4bc; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Appam + Coconut Milk</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #c2d6a4; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Veg Meals (Combo 2)</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #afc98c; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                            <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Chapathi + Palak Panneer</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-button right" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 10; width: 40px; height: 40px; border-radius: 50%; border: none; background-color: rgba(255, 255, 255, 0.9); box-shadow: 0 2px 5px rgba(0,0,0,0.2); cursor: pointer; display: flex; justify-content: center; align-items: center; font-size: 18px; opacity: 0.8; transition: opacity 0.3s ease;">❯</button>
+            </div>
+            <style>
+                /* Hide scrollbar but keep functionality */
+                .combo-categories::-webkit-scrollbar {
+                    display: none;
+                }
+                
+                /* Mobile optimizations */
+                @media (max-width: 768px) {
+                    .combo-category {
+                        flex: 0 0 85vw !important;
+                        min-width: 85vw !important;
+                    }
+                    
+                    .scroll-button {
+                        width: 32px !important;
+                        height: 32px !important;
+                    }
+                    
+                    /* Indicate scrollable area with fade effect */
+                    .combo-categories-wrapper::after {
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        height: 100%;
+                        width: 40px;
+                        background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.8));
+                        pointer-events: none;
+                    }
+                }
+                
+                /* Pulse animation for scroll buttons on mobile */
+                @media (max-width: 480px) {
+                    .scroll-button {
+                        animation: pulse 2s infinite;
+                    }
+                    
+                    @keyframes pulse {
+                        0% { transform: translateY(-50%) scale(1); }
+                        50% { transform: translateY(-50%) scale(1.1); }
+                        100% { transform: translateY(-50%) scale(1); }
+                    }
+                }
+            </style>
+        </div>
+    </section>
+    
+    <section class="preorder-card-section" id="preorder-meals">
+        <div class="container">
+            <div class="preorder-card">
+                <div class="card-image">
+                    <img src="img/thali.jpg" alt="Delicious Meal" loading="lazy" width="600" height="400">
+                </div>
+                <div class="card-content">
+                    <div class="section-title">
+                        <h2>Pre-order a Meal</h2>
+                        <p>Want to see if you like our taste? Order now from our lunch and dinner menu and get free delivery.</p>
+                    </div>
+    
+                    <div class="preorder-meal-options">
+                        <!-- Text rewording for meal descriptions -->
+                        <div class="meal-option">
+                            <h4>Meal</h4>
+                            <span class="price">₹100</span>
+                            <p>Homely, nutritious, and flavorful.</p>
+                        </div>
+                        <div class="meal-option">
+                            <h4>Super Meal</h4>
+                            <span class="price">₹130</span>
+                            <p>Wholesome, protein-rich, and delicious.</p>
+                        </div>
+                    </div>
+    
+                    <div class="preorder-details">
+                        <h3>Why Pre-Order?</h3>
+                        <p>We source fresh ingredients daily based on pre-orders. No excess, no wastage-just quality food. </p>
+    
+                        <h3>How It Works</h3>
+                        <ol style="padding-left: 20px; margin-bottom: 20px;">
+                            <li style="margin-bottom: 8px;">Check out our daily menu.</li>
+                            <li style="margin-bottom: 8px;">Book a meal in advance, and we'll cook it fresh for you.</li>
+                            <li style="margin-bottom: 8px;">We'll deliver it to your place.</li>
+                        </ol>
+                        <p style="margin-left: 20px; margin-top: -10px; margin-bottom: 15px;"><em>Timings: Lunch (12-2 PM), Dinner (7-9 PM)</em></p>
+                        <p><strong>We serve the Chennai OMR area.</strong></p>
+    
+                        <a href="https://wa.me/+919995309066" target="_blank" class="btn trial-btn" style="display: inline-block; margin-top: 20px; text-align: center;">Request a trial meal!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section class="ramadan-specials">
         <div class="video-overlay">
             <video autoplay muted loop playsinline class="ramadan-video">
@@ -318,127 +632,6 @@ function hideItems(element) {
         </div>
     </section>
 
-    <section class="daily-combos" id="daily-combos">
-        <div class="container">
-            <div class="section-title">
-                <h2>Daily Combos</h2>
-                <p>Explore our planned combos for the entire day!</p>
-            </div>
-            <div class="combo-categories-wrapper">
-                <button class="scroll-button left">❮</button>
-                <div class="combo-categories">
-                    <div class="combo-category">
-                        <h3>Super Sunday Combo</h3>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Breakfast</h4>
-                            <p class="combo-meal__item">Keppa Kanji + Pickle</p>
-                        </div>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Lunch</h4>
-                            <p class="combo-meal__item">Chicken Biryani + Raita + 1 Boiled Egg</p>
-                        </div>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Dinner</h4>
-                            <p class="combo-meal__item">3 Appam + Coconut Milk</p>
-                        </div>
-                    </div>
-                    <div class="combo-category">
-                        <h3>Combo 1</h3>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Breakfast</h4>
-                            <p class="combo-meal__item">Rava Upma + Coconut Chutney</p>
-                        </div>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Lunch</h4>
-                            <p class="combo-meal__item">Veg Meals (Combo 1)</p>
-                        </div>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Dinner</h4>
-                            <p class="combo-meal__item">Chola Poori + Channa Masala</p>
-                        </div>
-                    </div>
-                    <div class="combo-category">
-                        <h3>Combo 2</h3>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Breakfast</h4>
-                            <p class="combo-meal__item">3 Uthapam + Peanut Chutney + Mint Chutney</p>
-                        </div>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Lunch</h4>
-                            <p class="combo-meal__item">Rice + Chicken Gravy + Omelette</p>
-                        </div>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Dinner</h4>
-                            <p class="combo-meal__item">4 Chapathi + Dal Fry + 1 Egg Atho</p>
-                        </div>
-                    </div>
-                    <div class="combo-category">
-                        <h3>Combo 3</h3>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Breakfast</h4>
-                            <p class="combo-meal__item">Pongal + Sambhar + Coconut Chutney</p>
-                        </div>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Lunch</h4>
-                            <p class="combo-meal__item">4 Chapathi + Egg Gravy</p>
-                        </div>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Dinner</h4>
-                            <p class="combo-meal__item">4 Chapathi + Palak Panner</p>
-                        </div>
-                    </div>
-                    <div class="combo-category">
-                        <h3>Combo 4</h3>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Breakfast</h4>
-                            <p class="combo-meal__item">4 Idli + Sambhar + Tomato Chutney</p>
-                        </div>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Lunch</h4>
-                            <p class="combo-meal__item">Ghee Rice + Blood Chicken/ Beef Gravy</p>
-                        </div>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Dinner</h4>
-                            <p class="combo-meal__item">Puttu + Meen Curry</p>
-                        </div>
-                    </div>
-                    <div class="combo-category">
-                        <h3>Combo 5</h3>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Breakfast</h4>
-                            <p class="combo-meal__item">3 Appam + Coconut Milk</p>
-                        </div>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Lunch</h4>
-                            <p class="combo-meal__item">Meen Kolambu + Meen Fry</p>
-                        </div>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Dinner</h4>
-                            <p class="combo-meal__item">Idiyappam + Chicken Stew</p>
-                        </div>
-                    </div>
-                    <div class="combo-category">
-                        <h3>Combo 6</h3>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Breakfast</h4>
-                            <p class="combo-meal__item">4 Idli + Sambar + Onion Chutney</p>
-                        </div>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Lunch</h4>
-                            <p class="combo-meal__item">Veg Meals (Combo 2)</p>
-                        </div>
-                        <div class="combo-meal">
-                            <h4 class="combo-meal__title">Dinner</h4>
-                            <p class="combo-meal__item">4 Poori + Potato Kuruma + 3 Veg Kuruma</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="scroll-button right">❯</button>
-            </div>
-        </div>
-    </section>
-    
-
     <section class="testimonials">
         <div class="container">
             <div class="section-title">
@@ -447,45 +640,36 @@ function hideItems(element) {
             </div>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">The food is absolutely delicious and reminds me of my mom's cooking. The delivery is always on time, and the portions are generous!</p>
+                    <p class="testimonial-text">The food reminds me of my mom's cooking. The delivery is mostly on time, and food is spicy!</p>
                     <div class="testimonial-author">
                         
                         <div class="author-info">
-                            <h4>Rahul Sharma</h4>
-                            <p>IT Professional, OMR</p>
+                            <h4>Naveen</h4>
+                            <p>IT Professional, Tidel Park</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">I've been ordering from Myna for the past month, and I'm impressed with the quality and taste. I can spend my evenings out of the kitchen now!</p>
+                    <p class="testimonial-text">I've been eating from Myna for the past month, and I'm impressed with their taste. I get good food, and I don't have to doomscroll Swiggy anymore!</p>
                     <div class="testimonial-author">
                         
                         <div class="author-info">
-                            <h4>Priya Patel</h4>
-                            <p>Software Engineer, Chennai</p>
+                            <h4>Robin</h4>
+                            <p>Software Engineer, World Trade Center</p>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-text">The variety of options is amazing! I never get bored with their menu, and the food is always fresh and tasty. Their monthly subscription is a lifesaver!</p>
+                    <p class="testimonial-text">The variety of options is amazing! I never get bored with their menu.</p>
                     <div class="testimonial-author">
                         
                         <div class="author-info">
                             <h4>Amit Kumar</h4>
-                            <p>Bank Manager, OMR Area</p>
+                            <p>College Student, Shollinganallur</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="trial" id="trial">
-        <div class="container">
-            <h2>Try Our Home-Style Meals</h2>
-            <p>Contact us to arrange a trial meal!</p>
-            <p>We serve the Chennai OMR area with prompt, reliable delivery.</p>
-            <a href="https://wa.me/+917418688269?text=I'm%20interested%20in%20your%20plan" target="_blank" class="btn trial-btn hero-section__button hero-section__button--secondary">Request a trial meal!</a>
         </div>
     </section>
 
@@ -500,7 +684,7 @@ function hideItems(element) {
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#daily-combos">Daily Combos</a></li>
+                        <li><a href="#daily-combos">Daily Menu</a></li>
                         <li><a href="#subscription">Subscriptions</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -531,8 +715,8 @@ function hideItems(element) {
         document.addEventListener('DOMContentLoaded', function () {
     // SCROLLING FUNCTIONALITY
     const comboCategories = document.querySelector('.combo-categories');
-    const scrollLeftButton = document.querySelector('.scroll-arrow.left');
-    const scrollRightButton = document.querySelector('.scroll-arrow.right');
+    const scrollLeftButton = document.querySelector('.scroll-button.left');
+    const scrollRightButton = document.querySelector('.scroll-button.right');
 
     if (comboCategories && scrollLeftButton && scrollRightButton) {
         scrollLeftButton.addEventListener('click', () => {
@@ -556,82 +740,73 @@ function hideItems(element) {
 
     // DAILY COMBOS SCROLL FUNCTIONALITY
     const dailyCombos = document.querySelector('.daily-combos .combo-categories');
-const leftButton = document.querySelector('.daily-combos .scroll-button.left');
-const rightButton = document.querySelector('.daily-combos .scroll-button.right');
+    const leftButton = document.querySelector('.daily-combos .scroll-button.left');
+    const rightButton = document.querySelector('.daily-combos .scroll-button.right');
 
-if (dailyCombos && leftButton && rightButton) {
-    function updateScrollButtons() {
-        leftButton.disabled = dailyCombos.scrollLeft <= 0;
-        rightButton.disabled = dailyCombos.scrollLeft >= dailyCombos.scrollWidth - dailyCombos.clientWidth - 1;
-    }
-
-    updateScrollButtons();
-    dailyCombos.addEventListener('scroll', updateScrollButtons);
-
-    const comboCategory = document.querySelector('.daily-combos .combo-category');
-    const comboCategoryWidth = comboCategory.offsetWidth + 20; // 20px is the gap
-    const adjustedWidth = comboCategoryWidth * 0.95; // Reduce by 5%
-
-    const scrollSmooth = { behavior: 'smooth' };
-
-    leftButton.addEventListener('click', () => {
-        dailyCombos.scrollBy({ left: -adjustedWidth, ...scrollSmooth });
-        updateScrollButtons();
-    });
-
-    rightButton.addEventListener('click', () => {
-        dailyCombos.scrollBy({ left: adjustedWidth, ...scrollSmooth });
-        updateScrollButtons();
-    });
-
-    // DRAG SCROLL FOR MOBILE
-    let isDragging = false;
-    let startX;
-    let scrollLeft;
-    let velocity = 0;
-    let lastX = 0;
-    let animationFrameId;
-
-    dailyCombos.addEventListener('touchstart', (e) => {
-        isDragging = true;
-        startX = e.touches[0].pageX - dailyCombos.offsetLeft;
-        scrollLeft = dailyCombos.scrollLeft;
-        lastX = e.touches[0].pageX;
-        velocity = 0;
-        cancelAnimationFrame(animationFrameId);
-    });
-
-    dailyCombos.addEventListener('touchmove', (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        const x = e.touches[0].pageX - dailyCombos.offsetLeft;
-        const walk = (x - startX) * 1.2;
-        dailyCombos.scrollLeft = scrollLeft - walk;
-        velocity = e.touches[0].pageX - lastX;
-        lastX = e.touches[0].pageX;
-        updateScrollButtons();
-    });
-
-    dailyCombos.addEventListener('touchend', () => {
-        isDragging = false;
-        if (velocity !== 0) {
-            animateMomentum();
-        }
-    });
-
-    function animateMomentum() {
-        if (Math.abs(velocity) < 0.1) {
-            velocity = 0;
-            return;
+    if (dailyCombos && leftButton && rightButton) {
+        function updateScrollButtons() {
+            leftButton.style.display = dailyCombos.scrollLeft <= 10 ? 'none' : 'flex';
+            rightButton.style.display = dailyCombos.scrollLeft >= (dailyCombos.scrollWidth - dailyCombos.clientWidth - 10) ? 'none' : 'flex';
         }
 
-        dailyCombos.scrollLeft -= velocity;
-        velocity *= 0.95;
+        // Initialize button visibility
         updateScrollButtons();
+        
+        // Update on scroll
+        dailyCombos.addEventListener('scroll', updateScrollButtons);
 
-        animationFrameId = requestAnimationFrame(animateMomentum);
+        // Scroll distance calculation based on screen size
+        const getScrollDistance = () => {
+            // Use smaller scroll distance on mobile
+            return window.innerWidth < 768 ? window.innerWidth * 0.8 : 300;
+        };
+
+        // Click handlers for buttons
+        leftButton.addEventListener('click', () => {
+            dailyCombos.scrollBy({ left: -getScrollDistance(), behavior: 'smooth' });
+        });
+
+        rightButton.addEventListener('click', () => {
+            dailyCombos.scrollBy({ left: getScrollDistance(), behavior: 'smooth' });
+        });
+
+        // Improved touch handling
+        let startX, startScrollLeft, isDragging = false;
+
+        // Touch event handlers with passive option for better performance
+        dailyCombos.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].pageX;
+            startScrollLeft = dailyCombos.scrollLeft;
+            
+            // Show the user they can scroll
+            dailyCombos.style.cursor = 'grabbing';
+        }, { passive: true });
+
+        dailyCombos.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            
+            const x = e.touches[0].pageX;
+            const distance = (startX - x) * 1.5; // Multiply for faster scroll
+            dailyCombos.scrollLeft = startScrollLeft + distance;
+            
+            updateScrollButtons();
+        }, { passive: true });
+
+        dailyCombos.addEventListener('touchend', () => {
+            isDragging = false;
+            dailyCombos.style.cursor = '';
+        }, { passive: true });
+        
+        // Initialize scroll position to show first item fully on mobile
+        if (window.innerWidth < 768) {
+            // Wait for layout to stabilize
+            setTimeout(() => {
+                dailyCombos.scrollLeft = 0;
+                updateScrollButtons();
+            }, 100);
+        }
     }
-}
 
     // MOBILE MENU TOGGLE
     const menuToggle = document.getElementById('menuToggle');
