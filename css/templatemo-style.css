@@ -713,6 +713,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow-x: auto;
+  touch-action: pan-y;
 }
 
 .options-table table {
@@ -783,6 +784,7 @@ body {
   .options-table th, .options-table td {
       font-size: 0.9rem;
       padding: 12px;
+      touch-action: pan-y;
   }
 }
 
@@ -810,6 +812,7 @@ body {
   .options-table th, .options-table td {
       font-size: 0.85rem;
       padding: 10px;
+      touch-action: pan-y;
   }
 }
 
@@ -834,10 +837,12 @@ body {
   .options-table th, .options-table td {
       font-size: 0.8rem;
       padding: 8px;
+      touch-action: pan-y;
   }
 
   .options-table table {
       width: 100%;
+      touch-action: pan-y;
   }
 }
 
@@ -877,10 +882,9 @@ body {
   .options-table th, .options-table td {
       font-size: 0.75rem;
       padding: 6px;
+      touch-action: pan-y;
   }
 }
-
-
 
 /* Daily Combos Section */
 .combo-meal {

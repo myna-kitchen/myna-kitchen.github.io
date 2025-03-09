@@ -65,6 +65,7 @@ function hideItems(element) {
     </header>
     
     
+    
 
     <section class="hero-section" id="home">
         <div class="hero-section__video-wrapper">
@@ -77,9 +78,9 @@ function hideItems(element) {
         <div class="hero-section__content-container">
             <div class="hero-section__content">
                 <div class="hero-section__free-delivery-badge">FREE DELIVERY</div>
-                <div class="hero-section__tagline">We've got your meals sorted.</div>
-                <h1 class="hero-section__title">Homely meals, delivered with love</h1>
-                <p class="hero-section__description">Feel like home, eat enough, eat healthy. Never repeat your food with our diverse combo options.</p>
+                <div class="hero-section__tagline">Delicious Meals. Zero Hassle.</div>
+                <h1 class="hero-section__title">Food Sorted. Life's Sorted.</h1>
+                <p class="hero-section__description">Feel like home. Eat more, eat healthy. Our food, your place.</p>
                 <div class="hero-section__button-group">
                     <a href="#daily-combos" class="hero-section__button hero-section__button--primary">Explore Combos</a>
                     <a href="#subscription" class="hero-section__button hero-section__button--secondary">View Subscriptions</a>
@@ -92,29 +93,29 @@ function hideItems(element) {
     <section class="features" id="about">
         <div class="container">
             <div class="section-title">
-                <h2>Why Choose Us</h2>
-                <p>We bring the comfort of home-cooked meals right to your doorstep</p>
+                <h2>Our Food Philosophy</h2>
+                <p>Homely, fresh, at your place.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🏠</div>
-                    <h3>For Meat Lovers</h3>
-                    <p>Indulge in our specially crafted non-veg delights, prepared with premium ingredients to satisfy your cravings. Enjoy non-veg specials 5 days a week!</p>
+                    <div class="feature-icon"><i class="fas fa-drumstick-bite"></i></div>
+                    <h3>For Meat Enthusiasts</h3>
+                    <p>Savor premium non-vegetarian dishes 5 days a week. Enjoy a mix of North and South Indian recipes.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🚚</div>
+                    <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
                     <h3>Free Delivery</h3>
-                    <p>Timely delivery to your preferred location, ensuring your meals arrive fresh and hot.</p>
+                    <p>Your meals arrive at your place right on time, always fresh. Zero delivery charges, regardless of order size.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">⏱️</div>
-                    <h3>Convenient</h3>
-                    <p>Easy meal cancellation with instant refunds. Flexible and hassle-free service.</p>
+                    <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Flexible Subscription</h3>
+                    <p>Choose daily or weekday plans. Refund your cancelled meals. Select exactly what works for your schedule and budget.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🍽️</div>
-                    <h3>South Indian</h3>
-                    <p>Authentic South Indian meals, prepared just 1 hour before delivery.</p>
+                    <div class="feature-icon"><i class="fas fa-fire-flame-curved"></i></div>
+                    <h3>Freshly Prepared Meals</h3>
+                    <p>Cooked just one hour before delivery. No added preservatives. Just like home-cooked meals you love.</p>
                 </div>
             </div>
         </div>
@@ -128,8 +129,8 @@ function hideItems(element) {
                 </div>
                 <div class="card-content">
                     <div class="section-title">
-                        <h2>Pre-Order a Meal</h2>
-                        <p>One fresh meal, just for you. No waste, no extra charges—just great food at the perfect price.</p>
+                        <h2>Choose Your Plan</h2>
+                        <p>Select what best fits your lifestyle</p>
                     </div>
     
                     <div class="preorder-meal-options">
@@ -160,75 +161,110 @@ function hideItems(element) {
         </div>
     </section>
     
-    
-
-
     <section class="subscription-plans" id="subscription">
         <div class="container">
             <div class="section-title">
-                <h2>Subscription Plans</h2>
-                <p>Tailored subscriptions designed to elevate your daily dining experience.</p>
+                <h2>Choose Your Plan</h2>
+                <p>Select what best fits your lifestyle and budget.</p>
             </div>
     
-            <div class="plan-cards">
-                <div class="plan-card monthly-plan">
-                    <div class="plan-header">
-                        <h3>Everyday</h3>
-                        <div class="plan-price">₹233<span class="price-unit">/day</span></div>
+            <!-- Plan cards layout adjusted -->
+            <div class="plan-cards" style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin: 30px 0;">
+                <!-- Basic meal plan -->
+                <div class="plan-card daily-plan" style="flex: 1; min-width: 250px; max-width: 32%; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 10px 25px rgba(0,0,0,0.05); overflow: hidden; position: relative; padding: 30px 25px; height: 350px; display: flex; flex-direction: column; text-align: center;">
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="font-size: 26px; font-weight: 600; margin-bottom: 15px; color: #333;">One Meal a Day</h3>
+                        <div style="font-size: 34px; font-weight: 700; color: #e67e22; margin-bottom: 5px;">₹120<span style="font-size: 18px; color: #777; font-weight: 400;">/day</span></div>
+                        <p style="font-size: 16px; color: #666; margin-top: 5px;">Lunch or Dinner</p>
                     </div>
-                    <ul class="plan-features">
-                        <li><i class="fas fa-utensils"></i> Three Daily Feasts</li>
-                        <li><i class="fas fa-truck"></i> Complimentary Delivery</li>
-                        <li><i class="fas fa-drumstick-bite"></i> Five Non-Veg, Two Veg Days</li>
-                        <li><i class="fas fa-piggy-bank"></i> Monthly Savings of ₹1,410</li>
-                        <li><i class="fas fa-calendar-alt"></i> Total: ₹6,990</li>
-                    </ul>
+
+                    <div style="flex-grow: 1;">
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 12px;">Choose your meal of the day</li>
+                            <li>Minimum commitment</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-top: auto; text-align: center; padding-top: 15px; border-top: 1px solid #f0f0f0;">
+                        <p style="color: black; font-weight: 500; margin: 0; font-size: 14px; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Prices include delivery.</p>
+                    </div>
+                </div>
+                
+                <!-- Double meal plan -->
+                <div class="plan-card monthly-plan" style="flex: 1; min-width: 250px; max-width: 32%; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 10px 25px rgba(0,0,0,0.05); overflow: hidden; position: relative; padding: 30px 25px; height: 350px; display: flex; flex-direction: column; text-align: center;">
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="font-size: 26px; font-weight: 600; margin-bottom: 15px; color: #333;">Two Meals a Day</h3>
+                        <div style="font-size: 34px; font-weight: 700; color: #e67e22; margin-bottom: 5px;">₹220<span style="font-size: 18px; color: #777; font-weight: 400;">/day</span></div>
+                        <p style="font-size: 16px; color: #666; margin-top: 5px;">Lunch and Dinner</p>
+                    </div>
+
+                    <div style="flex-grow: 1;">
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 12px;">Intermittent fasting friendly</li>
+                            <li>Non-veg & veg options</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-top: auto; text-align: center; padding-top: 15px; border-top: 1px solid #f0f0f0;">
+                        <p style="color: black; font-weight: 500; margin: 0; font-size: 14px; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Prices include delivery.</p>
+                    </div>
                 </div>
     
-                <div class="plan-card executive-plan">
-                    <div class="plan-header">
-                        <h3>Executive</h3>
-                        <div class="plan-price">₹260<span class="price-unit">/day</span></div>
+                <!-- Complete meal plan -->
+                <div class="plan-card executive-plan" style="flex: 1; min-width: 250px; max-width: 32%; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 10px 25px rgba(0,0,0,0.05); overflow: hidden; position: relative; padding: 30px 25px; height: 350px; display: flex; flex-direction: column; text-align: center;">
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="font-size: 26px; font-weight: 600; margin-bottom: 15px; color: #333;">Three Meals a Day</h3>
+                        <div style="font-size: 34px; font-weight: 700; color: #e67e22; margin-bottom: 5px;">₹250<span style="font-size: 18px; color: #777; font-weight: 400;">/day</span></div>
+                        <p style="font-size: 16px; color: #666; margin-top: 5px;">Breakfast, Lunch and Dinner</p>
                     </div>
-                    <ul class="plan-features">
-                        <li><i class="fas fa-utensils"></i> Weekday Triple Treat</li>
-                        <li><i class="fas fa-truck"></i> Free Doorstep Delivery</li>
-                        <li><i class="fas fa-drumstick-bite"></i> Three Non-Veg, Two Veg Days</li>
-                        <li><i class="fas fa-briefcase"></i> Perfect for Professionals</li>
-                        <li><i class="fas fa-calendar-alt"></i> Total: ₹5,900</li>
-                    </ul>
+
+                    <div style="flex-grow: 1;">
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="margin-bottom: 12px;">Complete daily nutrition</li>
+                            <li>Best value for money</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-top: auto; text-align: center; padding-top: 15px; border-top: 1px solid #f0f0f0;">
+                        <p style="color: black; font-weight: 500; margin: 0; font-size: 14px; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Prices include delivery.</p>
+                    </div>
                 </div>
             </div>
     
             <div class="flexible-options">
                 <div class="options-header">
-                    <h3>Craft Your Custom Meal Experience</h3>
-                    <p>Choose the perfect blend of meals to fit your lifestyle.</p>
+                    <h3 style="color: black;">Monthly Packages</h3>
+                    <p>Enjoy the flexibility of customizing your meal frequency. Reduce daily meal decisions and maintain a consistent, healthy diet.</p>
                 </div>
-                <div class="options-table">
-                    <table>
+                <!-- Table layout adjusted for meal-wise pricing -->
+                <div class="options-table" style="overflow-x: auto; margin-top: 25px;">
+                    <table style="width: 100%; table-layout: fixed; border-collapse: collapse; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px;">
                         <thead>
-                            <tr>
-                                <th>Meal Choices</th>
-                                <th>Everyday (Monthly)</th>
-                                <th>Executive (Weekdays)</th>
+                            <tr style="background-color: #f8f8f8;">
+                                <th style="width: 40%; padding: 15px; text-align: center; border-bottom: 1px solid #eee;">SUBSCRIPTION TYPE</th>
+                                <th style="width: 20%; padding: 15px; text-align: center; border-bottom: 1px solid #eee;">ONE MEAL</th>
+                                <th style="width: 20%; padding: 15px; text-align: center; border-bottom: 1px solid #eee;">TWO MEALS</th>
+                                <th style="width: 20%; padding: 15px; text-align: center; border-bottom: 1px solid #eee;">THREE MEALS</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Three Meals</td>
-                                <td>₹6,990</td>
-                                <td>₹5,900</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee;">
+                                    <div>Daily Plan (7 days a week)</div>
+                                    <div style="font-size: 13px; color: #666; margin-top: 5px; font-style: italic;">We've got all your meals sorted. 24*7.</div>
+                                </td>
+                                <td style="padding: 15px; text-align: center; border-bottom: 1px solid #eee; font-weight: 500;">₹3,600</td>
+                                <td style="padding: 15px; text-align: center; border-bottom: 1px solid #eee; font-weight: 500;">₹6,600</td>
+                                <td style="padding: 15px; text-align: center; border-bottom: 1px solid #eee; font-weight: 500;">₹7,500</td>
                             </tr>
                             <tr>
-                                <td>Two Meals (Lunch + Dinner)</td>
-                                <td>₹6,600</td>
-                                <td>₹4,900</td>
-                            </tr>
-                            <tr>
-                                <td>One Meal (Lunch or Dinner)</td>
-                                <td>₹3,500</td>
-                                <td>₹2,999</td>
+                                <td style="padding: 15px;">
+                                    <div>Weekday Plan (5 days a week)</div>
+                                    <div style="font-size: 13px; color: #666; margin-top: 5px; font-style: italic;">Perfect for working professionals. Delivered to office or home.</div>
+                                </td>
+                                <td style="padding: 15px; text-align: center; font-weight: 500;">₹2,600</td>
+                                <td style="padding: 15px; text-align: center; font-weight: 500;">₹4,800</td>
+                                <td style="padding: 15px; text-align: center; font-weight: 500;">₹6,200</td>
                             </tr>
                         </tbody>
                     </table>
@@ -458,7 +494,7 @@ function hideItems(element) {
             <div class="footer-grid">
                 <div class="footer-column">
                     <h3>Myna Kitchen</h3>
-                    <p>Bringing the comfort of home-cooked meals to your doorstep. We believe in quality, taste, and convenience.</p>
+                    <p>Bringing the comfort of home-cooked meals to you. We believe in quality, taste, and convenience.</p>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
