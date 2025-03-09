@@ -56,14 +56,13 @@ body {
 }
 
 .navbar {
-  background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px 0;
-  position: fixed;
-  width: 100%;
+  background-color: #fff;
+  padding: 10px 0;
+  position: sticky;
   top: 0;
-  left: 0;
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 100%;
 }
 
 .nav-container {
@@ -73,6 +72,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  padding: 5px 0;
 }
 
 /* Brand Logo */
@@ -99,10 +100,23 @@ body {
   object-fit: contain; /* Ensures it scales well */
 }
 
-@media (max-width: 768px) { /* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .nav-container {
+    width: 95%;
+    padding: 5px 0;
+  }
+  
+  .brand-logo {
+    font-size: 1.2rem;
+  }
+  
   .brand-icon {
-    width: 30px; /* Default size */
-    height: 30px;
+    margin-right: 5px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -151,43 +165,68 @@ body {
   display: none;
   position: fixed;
   top: 60px;
-  left: 0;
   right: 0;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
+  width: 80%;
+  max-width: 300px;
   background: white;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   list-style: none;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s;
+  text-align: left;
+  padding: 0;
+  z-index: 9999;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  border-radius: 0 0 0 10px;
+  margin: 0;
 }
 
 .nav-menu-mobile li {
-  padding: 10px 0;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-menu-mobile li:last-child {
+  border-bottom: none;
 }
 
 .nav-menu-mobile li a {
   text-decoration: none;
   color: #333;
-  font-size: 1.3rem;
+  font-size: 1rem;
   display: block;
+  padding: 15px 20px;
   transition: 0.3s;
-  padding: 10px 20px;
+  min-height: 44px; /* Apple's recommended minimum tap target size */
 }
 
 .nav-menu-mobile li a:hover {
-  color: #e63946;
+  color: var(--primary);
+  background-color: #f9f9f9;
 }
 
 /* Menu Toggle (Hamburger) */
 .menu-toggle {
   display: none;
   flex-direction: column;
+  justify-content: space-between;
   cursor: pointer;
   gap: 5px;
+  z-index: 10000;
+  padding: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+.menu-toggle:hover {
+  background-color: rgba(0,0,0,0.05);
 }
 
 .menu-toggle div {
@@ -195,21 +234,35 @@ body {
   height: 3px;
   background: #333;
   border-radius: 2px;
-  transition: 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Hamburger animation states */
+.menu-toggle.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Responsive Styling */
 @media (max-width: 768px) {
   .nav-menu-desktop {
-      display: none;
+    display: none;
   }
 
   .menu-toggle {
-      display: flex;
+    display: flex;
   }
 
   .nav-menu-mobile.active {
-      display: flex;
+    display: flex;
+    transform: translateX(0);
   }
 }
 
@@ -686,7 +739,21 @@ body {
 
 .options-header h3 {
   font-size: 1.8rem;
-  color: #AAD15F;
+  color: #333;
+}
+
+.options-header p {
+  font-size: 1rem;
+  color: #666;
+}
+.options-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.options-header h3 {
+  font-size: 1.8rem;
+  color: #AAD15F; /* Updated color */
 }
 
 .options-header p {
@@ -695,74 +762,120 @@ body {
 }
 
 .options-table {
-  width: 100%;
-  overflow-x: auto; /* Enables horizontal scrolling */
   display: flex;
   justify-content: center;
   align-items: center;
-  touch-action: pan-y;
+  overflow-x: auto;
 }
 
 .options-table table {
   width: 100%;
-  min-width: 600px; /* Ensures table doesn’t shrink too much */
+  max-width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid #AAD15F;
+  border-radius: 10px; /* Rounded corners for cuteness */
+  overflow: hidden; /* Ensures rounded corners clip inner borders */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border: 2px solid #AAD15F; /* Updated border color */
 }
 
-.options-table th,
-.options-table td {
-  padding: 12px;
-  border: 1px solid #AAD15F;
+.options-table th, .options-table td {
+  padding: 12px; /* Slightly less padding for a more compact look */
+  border: 1px solid #AAD15F; /* Border color around all sides */
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.9rem; /* Slightly smaller font for a delicate feel */
 }
 
 .options-table th {
-  background: #e1f3c9;
-  color: #000;
-  font-weight: 600;
+  background: #e1f3c9; /* Light green background for headers */
+  color: #000; /* Black text for headers */
+  font-weight: 600; /* Slightly bolder for emphasis */
 }
 
 .options-table tbody tr {
-  background: #fff;
+  background: #fff; /* Every row background white */
 }
 
 .options-table tbody tr:hover {
-  background: #e1f3c9;
-  transition: background 0.3s ease;
+  background: #e1f3c9; /* Light green hover effect */
+  transition: background 0.3s ease; /* Smooth hover transition */
 }
 
+/* Add some subtle animations for cuteness */
 .options-table td {
   transition: transform 0.2s ease;
 }
 
 .options-table td:hover {
-  transform: scale(1.02);
+  transform: scale(1.02); /* Slight scale on hover */
 }
 
+
 /* Responsive Design */
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
+  .section-title h2 {
+      font-size: 2.2rem;
+  }
+
+  .section-title p {
+      font-size: 1.1rem;
+  }
+
+  .plan-card {
+      flex: 0 0 48%;
+  }
+
   .options-header h3 {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
   }
 
   .options-header p {
       font-size: 0.9rem;
   }
 
-  .options-table th, 
-  .options-table td {
+  .options-table th, .options-table td {
+      font-size: 0.9rem;
+      padding: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .section-title h2 {
+      font-size: 2rem;
+  }
+
+  .section-title p {
+      font-size: 1rem;
+  }
+
+  .plan-card {
+      flex: 0 0 48%;
+  }
+
+  .options-header h3 {
+      font-size: 1.4rem;
+  }
+
+  .options-header p {
+      font-size: 0.8rem;
+  }
+
+  .options-table th, .options-table td {
       font-size: 0.85rem;
       padding: 10px;
   }
 }
 
 @media (max-width: 768px) {
+  .plan-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .plan-card {
+      flex: 0 0 100%;
+  }
+
   .options-header h3 {
       font-size: 1.2rem;
   }
@@ -771,25 +884,41 @@ body {
       font-size: 0.8rem;
   }
 
-  .options-table {
-      width: 100%;
-      overflow-x: auto; /* Enables horizontal scrolling */
-      display: block; /* Prevents flexbox from messing up layout */
+  .options-table th, .options-table td {
+      font-size: 0.8rem;
+      padding: 8px;
   }
 
   .options-table table {
       width: 100%;
-      min-width: 500px; /* Ensures table doesn’t shrink too much */
-  }
-
-  .options-table th, 
-  .options-table td {
-      font-size: 0.8rem;
-      padding: 8px;
   }
 }
 
 @media (max-width: 576px) {
+  .section-title h2 {
+      font-size: 1.8rem;
+  }
+
+  .section-title p {
+      font-size: 0.9rem;
+  }
+
+  .plan-header h3 {
+      font-size: 1.3rem;
+  }
+
+  .plan-price {
+      font-size: 1.5rem;
+  }
+
+  .price-unit {
+      font-size: 0.7rem;
+  }
+
+  .plan-features li {
+      font-size: 0.9rem;
+  }
+
   .options-header h3 {
       font-size: 1rem;
   }
@@ -798,16 +927,13 @@ body {
       font-size: 0.7rem;
   }
 
-  .options-table table {
-      min-width: 400px; /* Ensures better layout on small screens */
-  }
-
-  .options-table th, 
-  .options-table td {
+  .options-table th, .options-table td {
       font-size: 0.75rem;
       padding: 6px;
   }
 }
+
+
 
 /* Daily Combos Section */
 .combo-meal {
@@ -913,16 +1039,33 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
-  padding: 15px; /* Increase padding for better touch */
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 1.2em;
   z-index: 10;
-  border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
+.daily-combos .scroll-button:hover {
+  background-color: #AAD15F;
+  color: white;
+}
+
+.daily-combos .scroll-button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+/* Fix scroll button positioning */
 .daily-combos .scroll-button.left {
   left: 0;
 }
@@ -931,71 +1074,31 @@ body {
   right: 0;
 }
 
-@media (max-width: 768px) {
-  .daily-combos .container {
-      width: 100%; /* Full width on mobile */
-      max-width: none; /* Remove max-width on mobile */
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .video-overlay-content {
+      position: static;
+      flex-direction: column;
+      align-items: stretch;
   }
 
-  .daily-combos .combo-categories {
-      gap: 10px;
-      padding-left: 5px;
-      padding-right: 5px;
+  .ramadan-video {
+      width: 100%;
+      height: auto;
   }
 
-  .daily-combos .combo-category {
-      padding: 10px;
-      flex: 0 0 calc(100% - 20px);
-      min-width: calc(100% - 30px);
-      box-sizing: border-box;
-      min-height: auto; /* Allow height to adjust based on content */
-      padding-bottom: 0;
+  .specials-items {
+      width: 100%;
   }
 
-  /* Adjust font sizes for better compactness on mobile */
-  .daily-combos .combo-category h3 {
-    font-size: 1.1em; /* Reduce heading size */
-    margin-bottom: 8px; /* Reduce margin */
+  .special-item {
+      width: calc(100% - 20px);
+      padding: 15px;
   }
 
-  .daily-combos .combo-meal {
-    margin-bottom: 8px; /* Reduce margin between meals */
-    padding: 6px; /* Reduce padding */
+  .ramadan-title, .ramadan-subtitle, .item-title, .item-description, .item-price {
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   }
-
-  .daily-combos .combo-meal__title {
-    font-size: 0.95em; /* Reduce title size */
-    margin-bottom: 3px; /* Reduce margin */
-  }
-
-  .daily-combos .combo-meal__item {
-    font-size: 0.85em; /* Reduce item size */
-  }
-
-  /* Adjust scroll button size for mobile */
-  .daily-combos .scroll-button {
-    padding: 8px; /* Reduce padding */
-    font-size: 1.1em; /* Reduce icon size */
-  }
-
-  .daily-combos .section-title h2 {
-      font-size: 2em;
-  }
-
-  .daily-combos .section-title p {
-      font-size: 1em;
-  }
-
-  /* Optional: Adjust arrow color for better visibility */
-  .daily-combos .scroll-button {
-    color: #AAD15F; /* Use a color that contrasts with the background */
-  }
-
-  /* Optional: Add a semi-transparent background on hover for better UX */
-  .daily-combos .scroll-button:hover {
-    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
-  }
-
 }
 
 /* Testimonials Section */
@@ -1139,7 +1242,7 @@ footer {
 .copyright {
   text-align: center;
   padding-top: 20px;
-  border-top: 1px solid #AAD15F;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: #aaa;
   font-size: 14px;
 }
@@ -1269,38 +1372,6 @@ footer {
   overflow: hidden;
   max-width: 900px;
   margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  .preorder-card-section {
-    padding: 0px 0px;  
-  }
-}
-
-
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-  .features {
-    margin-bottom: 0; /* Reduce gap by half on mobile */
-  }
-
-  .preorder-card-section {
-    padding-top: 0; /* Reduce gap by half on mobile */
-  }
-
-  .testimonials {
-    padding-top: 0px; 
-    padding-bottom: 10px;
-  }
-
-  .trial {
-    padding-top: 10px; 
-    padding-bottom: 5px;
-  }
-
-  .contact {
-    padding-top: 5px; 
-  }
 }
 
 .card-image {
@@ -1651,39 +1722,235 @@ tbody tr:hover {
   .ramadan-title, .ramadan-subtitle, .item-title, .item-description, .item-price {
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   }
+}
 
-  .footer-link {
-    color: #AAD15F; /* Set link color to white */
+/* Prevent body scrolling when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* Fixed navbar for mobile */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 5px 0;
   }
-
-  .footer-link:hover {
-      color: #e63946; /* Change color on hover */
+  
+  body {
+    padding-top: 70px; /* Adjust based on navbar height */
   }
-  /* Mobile Responsive Footer */
-  @media (max-width: 768px) {
-    .footer-grid {
-      grid-template-columns: 1fr; /* Stack columns vertically on mobile */
-      gap: 20px; /* Reduce gap between columns */
-    }
-
-    .footer-column {
-      text-align: center; /* Center-align text for mobile */
-    }
-
-    .social-links {
-      justify-content: center; /* Center-align social icons */
-    }
-
-    .footer-column ul li a {
-      color: #aaa; /* Change link color to white for better readability */
-    }
-
-    .footer-column ul li a:hover {
-      color: var(--accent); /* Hover color for links */
-    }
-
-    .copyright {
-      font-size: 12px; /* Slightly smaller font size for mobile */
-    }
+  
+  /* Ensure hero section aligns properly */
+  .hero-section {
+    margin-top: -10px;
   }
-} 
+}
+
+/* Improve scroll button visibility on mobile */
+.daily-combos .scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1.2em;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.daily-combos .scroll-button:hover {
+  background-color: #AAD15F;
+  color: white;
+}
+
+.daily-combos .scroll-button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+/* Optimize for mobile touch interactions */
+@media (max-width: 768px) {
+  .daily-combos .scroll-button {
+    width: 36px;
+    height: 36px;
+  }
+  
+  /* Ensure mobile scrolling is smooth */
+  .daily-combos .combo-categories {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 15px;
+  }
+  
+  .daily-combos .combo-category {
+    scroll-snap-align: start;
+    flex: 0 0 85%;
+    max-width: 300px;
+  }
+  
+  /* Mobile menu styles already defined earlier */
+}
+
+/* Optimize images for different screen sizes */
+@media (max-width: 576px) {
+  .card-image img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+}
+
+/* iOS-specific optimizations */
+.ios-device {
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+}
+
+.ios-device button,
+.ios-device a {
+  cursor: pointer; /* Ensure elements are tappable */
+}
+
+.ios-device .daily-combos .combo-categories {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* Ensure menu items have sufficient tap targets for mobile */
+@media (max-width: 768px) {
+  /* Mobile menu styles already defined earlier */
+  
+  /* Improve tap area for scroll buttons */
+  .daily-combos .scroll-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Improve form elements on mobile */
+  input, 
+  select, 
+  textarea, 
+  button {
+    font-size: 16px; /* Prevent iOS zoom on focus */
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  /* Improve section spacing for mobile */
+  section {
+    padding: 40px 0;
+  }
+  
+  /* Make container take more width on small screens */
+  .container {
+    width: 95%;
+  }
+  
+  /* Improve typography for mobile */
+  .section-title h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .section-title p {
+    font-size: 16px;
+  }
+  
+  /* Adjust features grid for mobile */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  /* Footer fixes for mobile */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  /* Testimonial fixes */
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  /* Further optimize for very small screens */
+  .section-title h2 {
+    font-size: 22px;
+  }
+  
+  section {
+    padding: 30px 0;
+  }
+  
+  .hero-section__title {
+    font-size: 28px;
+  }
+  
+  .hero-section__description {
+    font-size: 16px;
+  }
+  
+  /* Adjust pricing cards for small screens */
+  .plan-card {
+    padding: 20px 15px;
+  }
+}
+
+/* Ensure mobile menu displays properly */
+@media (max-width: 768px) {
+  /* Hide desktop menu */
+  .nav-menu-desktop {
+    display: none !important;
+  }
+  
+  /* Show mobile menu toggle */
+  .menu-toggle {
+    display: flex !important;
+  }
+  
+  /* Active mobile menu */
+  .nav-menu-mobile.active {
+    display: flex !important;
+    transform: translateX(0) !important;
+    right: 0 !important;
+  }
+  
+  /* Handle scrolling when menu is open */
+  body.menu-open {
+    overflow: hidden !important;
+  }
+  
+  /* Give menu items sufficient tap targets */
+  .nav-menu-mobile li a {
+    padding: 15px 20px !important;
+    font-size: 16px !important;
+  }
+  
+  /* Stronger box-shadow for better visibility */
+  .nav-menu-mobile {
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15) !important;
+  }
+}
