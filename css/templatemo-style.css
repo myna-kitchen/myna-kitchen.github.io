@@ -686,21 +686,7 @@ body {
 
 .options-header h3 {
   font-size: 1.8rem;
-  color: #333;
-}
-
-.options-header p {
-  font-size: 1rem;
-  color: #666;
-}
-.options-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.options-header h3 {
-  font-size: 1.8rem;
-  color: #AAD15F; /* Updated color */
+  color: #AAD15F;
 }
 
 .options-header p {
@@ -709,123 +695,74 @@ body {
 }
 
 .options-table {
+  width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling */
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: auto;
   touch-action: pan-y;
 }
 
 .options-table table {
   width: 100%;
-  max-width: 100%;
+  min-width: 600px; /* Ensures table doesn’t shrink too much */
   border-collapse: collapse;
   margin: 20px 0;
-  border-radius: 10px; /* Rounded corners for cuteness */
-  overflow: hidden; /* Ensures rounded corners clip inner borders */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  border: 2px solid #AAD15F; /* Updated border color */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #AAD15F;
 }
 
-.options-table th, .options-table td {
-  padding: 12px; /* Slightly less padding for a more compact look */
-  border: 1px solid #AAD15F; /* Border color around all sides */
+.options-table th,
+.options-table td {
+  padding: 12px;
+  border: 1px solid #AAD15F;
   text-align: center;
-  font-size: 0.9rem; /* Slightly smaller font for a delicate feel */
+  font-size: 0.9rem;
 }
 
 .options-table th {
-  background: #e1f3c9; /* Light green background for headers */
-  color: #000; /* Black text for headers */
-  font-weight: 600; /* Slightly bolder for emphasis */
+  background: #e1f3c9;
+  color: #000;
+  font-weight: 600;
 }
 
 .options-table tbody tr {
-  background: #fff; /* Every row background white */
+  background: #fff;
 }
 
 .options-table tbody tr:hover {
-  background: #e1f3c9; /* Light green hover effect */
-  transition: background 0.3s ease; /* Smooth hover transition */
+  background: #e1f3c9;
+  transition: background 0.3s ease;
 }
 
-/* Add some subtle animations for cuteness */
 .options-table td {
   transition: transform 0.2s ease;
 }
 
 .options-table td:hover {
-  transform: scale(1.02); /* Slight scale on hover */
+  transform: scale(1.02);
 }
-
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .section-title h2 {
-      font-size: 2.2rem;
-  }
-
-  .section-title p {
-      font-size: 1.1rem;
-  }
-
-  .plan-card {
-      flex: 0 0 48%;
-  }
-
-  .options-header h3 {
-      font-size: 1.6rem;
-  }
-
-  .options-header p {
-      font-size: 0.9rem;
-  }
-
-  .options-table th, .options-table td {
-      font-size: 0.9rem;
-      padding: 12px;
-      touch-action: pan-y;
-  }
-}
-
 @media (max-width: 992px) {
-  .section-title h2 {
-      font-size: 2rem;
-  }
-
-  .section-title p {
-      font-size: 1rem;
-  }
-
-  .plan-card {
-      flex: 0 0 48%;
-  }
-
   .options-header h3 {
       font-size: 1.4rem;
   }
 
   .options-header p {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
   }
 
-  .options-table th, .options-table td {
+  .options-table th, 
+  .options-table td {
       font-size: 0.85rem;
       padding: 10px;
-      touch-action: pan-y;
   }
 }
 
 @media (max-width: 768px) {
-  .plan-cards {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .plan-card {
-      flex: 0 0 100%;
-  }
-
   .options-header h3 {
       font-size: 1.2rem;
   }
@@ -834,43 +771,25 @@ body {
       font-size: 0.8rem;
   }
 
-  .options-table th, .options-table td {
-      font-size: 0.8rem;
-      padding: 8px;
-      touch-action: pan-y;
+  .options-table {
+      width: 100%;
+      overflow-x: auto; /* Enables horizontal scrolling */
+      display: block; /* Prevents flexbox from messing up layout */
   }
 
   .options-table table {
       width: 100%;
-      touch-action: pan-y;
+      min-width: 500px; /* Ensures table doesn’t shrink too much */
+  }
+
+  .options-table th, 
+  .options-table td {
+      font-size: 0.8rem;
+      padding: 8px;
   }
 }
 
 @media (max-width: 576px) {
-  .section-title h2 {
-      font-size: 1.8rem;
-  }
-
-  .section-title p {
-      font-size: 0.9rem;
-  }
-
-  .plan-header h3 {
-      font-size: 1.3rem;
-  }
-
-  .plan-price {
-      font-size: 1.5rem;
-  }
-
-  .price-unit {
-      font-size: 0.7rem;
-  }
-
-  .plan-features li {
-      font-size: 0.9rem;
-  }
-
   .options-header h3 {
       font-size: 1rem;
   }
@@ -879,10 +798,14 @@ body {
       font-size: 0.7rem;
   }
 
-  .options-table th, .options-table td {
+  .options-table table {
+      min-width: 400px; /* Ensures better layout on small screens */
+  }
+
+  .options-table th, 
+  .options-table td {
       font-size: 0.75rem;
       padding: 6px;
-      touch-action: pan-y;
   }
 }
 
