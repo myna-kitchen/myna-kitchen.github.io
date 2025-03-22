@@ -43,19 +43,21 @@ You can also manually edit the CSV file:
 The CSV file follows this format:
 
 ```
-day,meal_type,item
-Sunday,Breakfast,Keppa Kanji + Pickle
-Sunday,Lunch,Chicken Biryani + Chilli Chicken + Raita + 1 Boiled Egg
+day,meal_type,meal_category,item
+Sunday,Breakfast,Meal,Keppa Kanji + Pickle
+Sunday,Lunch,Super Meal,Chicken Biryani + Chilli Chicken + Raita + 1 Boiled Egg
 ```
 
 - First column: Day of the week (Sunday, Monday, etc.)
 - Second column: Meal type (Breakfast, Lunch, Dinner)
-- Third column: The menu item
+- Third column: Meal category (Meal, Super Meal)
+- Fourth column: The menu item
 
 ## Tips
 
 - Always maintain the CSV format with the header row
 - Make sure to include all days and meal types
+- Valid meal categories are "Meal" and "Super Meal"
 - If a meal has commas, they'll be handled correctly in the CSV parsing
 
 ## Support

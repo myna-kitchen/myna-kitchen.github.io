@@ -22,23 +22,27 @@ function parseCSV(csvText) {
         if (!lines[i].trim()) continue; // Skip empty lines
         
         const values = lines[i].split(',');
+        if (values.length < 4) continue; // Skip invalid rows (need day, meal_type, meal_category, item)
+        
         const day = values[0];
         const mealType = values[1];
+        const mealCategory = values[2];
         
         // Join remaining values in case the meal item itself contains commas
-        const mealItem = values.slice(2).join(',');
+        const mealItem = values.slice(3).join(',');
         
         // Initialize day objects if they don't exist
         if (!result[day]) {
-            result[day] = {
-                Breakfast: '',
-                Lunch: '',
-                Dinner: ''
-            };
+            result[day] = {};
         }
         
-        // Assign meal to the appropriate day and meal type
-        result[day][mealType] = mealItem;
+        // Store meal type, category and item
+        if (!result[day][mealType]) {
+            result[day][mealType] = {
+                category: mealCategory,
+                item: mealItem
+            };
+        }
     }
     
     return result;
@@ -86,6 +90,13 @@ function updateMenu(menuData) {
         ];
         
         mealTypes.forEach(meal => {
+            if (!menuData[day][meal.type]) return; // Skip if no data for this meal type
+            
+            // Get meal info
+            const mealInfo = menuData[day][meal.type];
+            const mealCategory = mealInfo.category || 'Meal';
+            const mealItem = mealInfo.item || 'Not available';
+            
             // Create meal card
             const mealCard = document.createElement('div');
             mealCard.className = 'combo-meal';
@@ -104,21 +115,21 @@ function updateMenu(menuData) {
             mealCard.setAttribute('onmouseover', "this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';");
             mealCard.setAttribute('onmouseout', "this.style.transform='translateY(0)'; this.style.boxShadow='none';");
             
-            // Add meal title
+            // Add meal title with category
             const mealTitle = document.createElement('h4');
             mealTitle.className = 'combo-meal__title';
             mealTitle.style.margin = '0 0 8px 0';
             mealTitle.style.fontWeight = '600';
-            mealTitle.textContent = meal.type;
+            mealTitle.innerHTML = `${meal.type} <span style="color: #e67e22; font-size: 0.85em; font-weight: 400;">(${mealCategory})</span>`;
             mealCard.appendChild(mealTitle);
             
             // Add meal item
-            const mealItem = document.createElement('p');
-            mealItem.className = 'combo-meal__item';
-            mealItem.style.margin = '0';
-            mealItem.style.lineHeight = '1.4';
-            mealItem.textContent = menuData[day][meal.type] || 'Not available';
-            mealCard.appendChild(mealItem);
+            const mealItemElement = document.createElement('p');
+            mealItemElement.className = 'combo-meal__item';
+            mealItemElement.style.margin = '0';
+            mealItemElement.style.lineHeight = '1.4';
+            mealItemElement.textContent = mealItem;
+            mealCard.appendChild(mealItemElement);
             
             // Add meal card to day card
             dayCard.appendChild(mealCard);
