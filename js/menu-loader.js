@@ -120,7 +120,14 @@ function updateMenu(menuData) {
             mealTitle.className = 'combo-meal__title';
             mealTitle.style.margin = '0 0 8px 0';
             mealTitle.style.fontWeight = '600';
-            mealTitle.innerHTML = `${meal.type} <span style="color: #e67e22; font-size: 0.85em; font-weight: 400;">(${mealCategory})</span>`;
+            
+            // Only show meal category for Lunch and Dinner, not for Breakfast
+            if (meal.type === 'Breakfast') {
+                mealTitle.textContent = meal.type;
+            } else {
+                mealTitle.innerHTML = `${meal.type} <span style="color: #e67e22; font-size: 0.85em; font-weight: 400;">(${mealCategory})</span>`;
+            }
+            
             mealCard.appendChild(mealTitle);
             
             // Add meal item
