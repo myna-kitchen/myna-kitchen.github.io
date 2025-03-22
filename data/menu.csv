@@ -1,22 +1,22 @@
 day,meal_type,meal_category,item
-Sunday,Breakfast,,Keppa Kanji + Pickle
-Sunday,Lunch,Super Meal,Mutton Biryani + Chilli Chicken + Raita + 1 Boiled Egg
-Sunday,Dinner,Meal,Parotta + Chicken Kolambu
-Monday,Breakfast,,Idli + Sambar + Tomato Chutney
-Monday,Lunch,Meal,Veg Meals (Combo 1) + Fried Egg
-Monday,Dinner,Meal,4 Uthapam + Dal Fry + Onion Chutney + 1 Egg Atho
-Tuesday,Breakfast,,Uthapam + Peanut Chutney + Mint Chutney
-Tuesday,Lunch,Super Meal,Jeera Rice + Chicken Gravy + Vaazhakkai Varuval + Curd Rice
-Tuesday,Dinner,Meal,Idli + Meen Kolambu + Chutney
-Wednesday,Breakfast,,Pongal + Sambhar + Coconut Chutney
-Wednesday,Lunch,Meal,4 Chapathi + Bhindi + Kadai Paneer
-Wednesday,Dinner,Super Meal,Puttu + Meen Curry
-Thursday,Breakfast,,Idli + Sambhar + Tomato Chutney
-Thursday,Lunch,Super Meal,Mushroom Biryani + Pepper Chicken + Watermelon & Cucumber
-Thursday,Dinner,Meal,4 Poori + Potato Curry + Cut Onions + Lemon
-Friday,Breakfast,,Rava Upma + Coconut Chutney
-Friday,Lunch,Meal,Rice + Dal Sambhar + Nethili Fry
-Friday,Dinner,Super Meal,Idiyappam + Chicken Stew
-Saturday,Breakfast,,Appam + Coconut Milk
-Saturday,Lunch,Super Meal,Veg Meals (Combo 2) + Egg Burji
-Saturday,Dinner,Meal,4 Chapathi + Palak Paneer + Rajma Salad 
+Sunday,Breakfast,,Keppa Kanji & Pickle
+Sunday,Lunch,Special Meal,Mutton Biryani & Chilli Chicken & Raita & 1 Boiled Egg
+Sunday,Dinner,Meal,Parotta & Chicken Kolambu
+Monday,Breakfast,,Idli & Sambar & Tomato Chutney
+Monday,Lunch,Meal,Veg Meals (Combo 1) & Fried Egg
+Monday,Dinner,Meal,4 Chapathi & Channa Masala
+Tuesday,Breakfast,,Uthapam & Peanut Chutney & Mint Chutney
+Tuesday,Lunch,Super Meal,Jeera Rice & Chicken Gravy & Vaazhakkai Varuval & Curd Rice
+Tuesday,Dinner,Meal,Uthapam & Sambhar & Chutney & Egg Atho
+Wednesday,Breakfast,,Pongal & Sambhar & Coconut Chutney
+Wednesday,Lunch,Meal,4 Chapathi & Kadai Paneer & Bhindi
+Wednesday,Dinner,Super Meal,Idli & Meen Kolambu
+Thursday,Breakfast,,Idli & Sambhar & Tomato Chutney
+Thursday,Lunch,Super Meal,Mushroom Biryani & Pepper Chicken & Watermelon & Cucumber
+Thursday,Dinner,Meal,4 Poori & Potato Curry & Cut Onions & Lemon
+Friday,Breakfast,,Rava Upma & Coconut Chutney
+Friday,Lunch,Super Meal,Rice & Dal Sambhar & Nethili Fry
+Friday,Dinner,Meal,Idiyappam & Egg Curry 
+Saturday,Breakfast,,Appam & Coconut Milk
+Saturday,Lunch,Meal,Garlic Fried Rice & Chilli Potato
+Saturday,Dinner,Super Meal,4 Chapathi & Palak Paneer & Rajma Salad 
