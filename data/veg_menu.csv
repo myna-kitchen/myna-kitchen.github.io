@@ -1,22 +1,22 @@
 day,meal_type,meal_category,item
-Sunday,Breakfast,,Vegetable Upma & Coconut Chutney
-Sunday,Lunch,Special Meal,Vegetable Biryani & Paneer Tikka & Raita
-Sunday,Dinner,Meal,Veg Parotta & Mixed Vegetable Curry
+Sunday,Breakfast,,Keppa Kanji & Pickle
+Sunday,Lunch,Special Meal,Veg Meals (Combo 1)
+Sunday,Dinner,Meal,Parotta & Veg Kuruma
 Monday,Breakfast,,Idli & Sambar & Tomato Chutney
-Monday,Lunch,Meal,Veg Meals (Combo 1)
-Monday,Dinner,Meal,2 Chole Poori & Channa Masala
+Monday,Lunch,Meal,Jeera Rice & Dal Fry & Vaazhakkai Varuval & Curd Rice
+Monday,Dinner,Meal,Chapathi & Channa Masala
 Tuesday,Breakfast,,Uthapam & Peanut Chutney & Mint Chutney
-Tuesday,Lunch,Super Meal,Jeera Rice & Paneer Butter Masala & Curd Rice
-Tuesday,Dinner,Meal,4 Chapathi & Dal Fry & Aloo Gobi
+Tuesday,Lunch,Super Meal,4 Chapathi & Bhindi & Kadai Paneer
+Tuesday,Dinner,Meal,4 Uthapam & Dal Fry & Onion Chutney
 Wednesday,Breakfast,,Pongal & Sambhar & Coconut Chutney
-Wednesday,Lunch,Meal,4 Chapathi & Kadai Panneer & Bhindi
-Wednesday,Dinner,Super Meal,Idli & Mixed Vegetable Curry
+Wednesday,Lunch,Meal,Mushroom Biryani & Gobi 65 & Watermelon & Cucumber
+Wednesday,Dinner,Super Meal,Ghee Podi Idly & Chutney
 Thursday,Breakfast,,Idli & Sambhar & Tomato Chutney
-Thursday,Lunch,Super Meal,Mushroom Biryani & Gobi Manchurian & Watermelon & Cucumber
+Thursday,Lunch,Super Meal,Rice & Dal Sambhar
 Thursday,Dinner,Meal,4 Poori & Potato Curry & Cut Onions & Lemon
 Friday,Breakfast,,Rava Upma & Coconut Chutney
-Friday,Lunch,Super Meal,Rice & Dal Sambhar & Mixed Vegetable Fry
-Friday,Dinner,Meal,Idiyappam & Vegetable Kurma
+Friday,Lunch,Super Meal,Veg Meals (Combo 2)
+Friday,Dinner,Meal,Idiyappam & Kadala Curry
 Saturday,Breakfast,,Appam & Coconut Milk
-Saturday,Lunch,Meal,Garlic Fried Rice & Chilli Potato
+Saturday,Lunch,Meal,Veg Meals (Combo 2)
 Saturday,Dinner,Super Meal,4 Chapathi & Palak Paneer & Rajma Salad
