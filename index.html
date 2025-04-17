@@ -370,70 +370,271 @@
     </section>
 
     <section class="daily-combos" id="daily-combos">
-    <div class="container">
-        <div class="section-title">
-            <h2>Daily Menu</h2>
-            <p>Never repeat a meal throughout the week!</p>
-        </div>
-
-        <!-- ===== NON-VEG SECTION (RED) ===== -->
-        <div class="subsection-title">
-            <h3>Non-Veg</h3>
-        </div>
-        <div class="combo-categories-wrapper" style="position: relative; overflow: hidden; margin: 0 -10px; padding: 0 10px;">
-            <button class="scroll-button left">❮</button>
-            <div class="combo-categories" style="display: flex; overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding: 15px 5px; gap: 15px; scrollbar-width: none; -ms-overflow-style: none;">
-                <!-- Sunday -->
-                <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
-                    <h3>Sunday Special</h3>
-                    <div class="combo-meal" style="background-color: #f8d7d7; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                        <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
-                        <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Keppa Kanji + Pickle</p>
+        <div class="container">
+            <div class="section-title">
+                <h2>Daily Menu</h2>
+                <p>Never repeat a meal throughout the week!</p>
+            </div>
+    
+            <!-- ========== NON-VEG SECTION (RED) ========== -->
+            <div class="subsection-title" style="margin-top: 20px; text-align: center; font-size: 1.2em;">
+                <h3>Non Veg</h3>
+              </div>
+            <div class="combo-categories-wrapper" style="position: relative; overflow: hidden; margin: 0 -10px; padding: 0 10px 20px;">
+                <button class="scroll-button left">❮</button>
+                <div class="combo-categories" style="display: flex; overflow-x: auto; scroll-behavior: smooth; padding: 15px 5px; gap: 15px; scrollbar-width: none;">
+                    <!-- Sunday Non-Veg -->
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Sunday Special</h3>
+                        <div class="combo-meal" style="background-color: #ffdddd; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p style="margin: 0;">Keppa Kanji + Pickle</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #ffbbbb; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p style="margin: 0;">Rice & Pepper Chicken & Watermelon & Rasam</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #ff9999; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p style="margin: 0;">Chicken Kothu Parotta</p>
+                        </div>
                     </div>
-                    <div class="combo-meal" style="background-color: #f0b6b6; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                        <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
-                        <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Chicken Biryani + Chilli Chicken + Raita + 1 Boiled Egg</p>
+    
+                    <!-- Monday Non-Veg -->
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Monday</h3>
+                        <div class="combo-meal" style="background-color: #ffdddd; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p style="margin: 0;">Pongal & Sambhar & Chutney</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #ffbbbb; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p style="margin: 0;">Rice & Mixed Veg Gravy & Payasam & Potato Fry & Rasam</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #ff9999; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p style="margin: 0;">Chole Bhature & Channa Masala</p>
+                        </div>
                     </div>
-                    <div class="combo-meal" style="background-color: #e89595; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                        <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
-                        <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Parotta + Mutton Kolambu</p>
+    
+                    <!-- Tuesday Non-Veg -->
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Tuesday</h3>
+                        <div class="combo-meal" style="background-color: #ffdddd; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p style="margin: 0;">Sambar Idly & Chakkarai Pongal</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #ffbbbb; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p style="margin: 0;">Ghee Rice & Kashmiri Chicken Gravy & Fried Egg & Curd Rice</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #ff9999; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p style="margin: 0;">Chapathi & Dal Panchmel</p>
+                        </div>
+                    </div>
+    
+                    <!-- Wednesday Non-Veg -->
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Wednesday</h3>
+                        <div class="combo-meal" style="background-color: #ffdddd; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p style="margin: 0;">Onion Utthapam & Coconut Chutney & Sambar</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #ffbbbb; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p style="margin: 0;">Rice & Fish Curry & Goan Rava Fish Fry & Keerai Poriyal</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #ff9999; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p style="margin: 0;">Ghee Podi Idly</p>
+                        </div>
+                    </div>
+    
+                    <!-- Thursday Non-Veg -->
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Thursday</h3>
+                        <div class="combo-meal" style="background-color: #ffdddd; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p style="margin: 0;">Club Sandwich + Sundal Bowl</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #ffbbbb; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p style="margin: 0;">Wheat Parotta & Bhindi & Dahi Panneer</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #ff9999; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p style="margin: 0;">Stir Fried Egg Noodles</p>
+                        </div>
+                    </div>
+    
+                    <!-- Friday Non-Veg -->
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Friday</h3>
+                        <div class="combo-meal" style="background-color: #ffdddd; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p style="margin: 0;">Kichadi & Chutney</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #ffbbbb; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p style="margin: 0;">Mughalai Chicken Briyani & Raita</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #ff9999; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p style="margin: 0;">Idiyappam & Chicken Stew</p>
+                        </div>
+                    </div>
+    
+                    <!-- Saturday Non-Veg -->
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Saturday</h3>
+                        <div class="combo-meal" style="background-color: #ffdddd; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p style="margin: 0;">Puttu & Kadala Curry</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #ffbbbb; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p style="margin: 0;">Original Pesto Pasta</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #ff9999; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p style="margin: 0;">Semiya Pulav</p>
+                        </div>
                     </div>
                 </div>
-                <!-- Monday to Saturday (same structure, just change background colors to red shades) -->
-                <!-- ... (duplicate for all days with red backgrounds) ... -->
+                <button class="scroll-button right">❯</button>
             </div>
-            <button class="scroll-button right">❯</button>
-        </div>
-
-        <!-- ===== VEG SECTION (GREEN - ORIGINAL) ===== -->
-        <div class="subsection-title" style="margin-top: 30px;">
-            <h3>Veg</h3>
-        </div>
-        <div class="combo-categories-wrapper" style="position: relative; overflow: hidden; margin: 0 -10px; padding: 0 10px;">
-            <button class="scroll-button left">❮</button>
-            <div class="combo-categories" style="display: flex; overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding: 15px 5px; gap: 15px; scrollbar-width: none; -ms-overflow-style: none;">
-                <!-- Sunday -->
-                <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
-                    <h3>Sunday Special</h3>
-                    <div class="combo-meal" style="background-color: #d7e4bc; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                        <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
-                        <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Keppa Kanji + Pickle</p>
+    
+            <!-- ========== VEG SECTION (GREEN) ========== -->
+            <div class="subsection-title" style="margin-top: 20px; text-align: center; font-size: 1.2em;">
+                <h3>Veg</h3>
+            </div>
+            <div class="combo-categories-wrapper" style="position: relative; overflow: hidden; margin: 0 -10px; padding: 0 10px;">
+                <button class="scroll-button left">❮</button>
+                <div class="combo-categories" style="display: flex; overflow-x: auto; scroll-behavior: smooth; padding: 15px 5px; gap: 15px; scrollbar-width: none;">
+                    <!-- Sunday Veg -->
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Sunday Special</h3>
+                        <div class="combo-meal" style="background-color: #d7e4bc; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p style="margin: 0;">Keppa Kanji + Pickle</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #c2d6a4; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p style="margin: 0;">Veg Biryani + Paneer Doh Pyaza + Raita</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #afc98c; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p style="margin: 0;">Curd Rice + Curry leaves Potato fried</p>
+                        </div>
                     </div>
-                    <div class="combo-meal" style="background-color: #c2d6a4; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                        <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
-                        <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Veg Biryani + Paneer Gravy + Raita</p>
+    
+                    <!-- Monday Veg -->
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Monday</h3>
+                        <div class="combo-meal" style="background-color: #d7e4bc; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p style="margin: 0;">Pongal & Sambhar & Chutney</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #c2d6a4; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p style="margin: 0;">Rice & Mixed Veg Gravy & Payasam & Potato Fry & Rasam</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #afc98c; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p style="margin: 0;">Chole Bhature & Channa Masala</p>
+                        </div>
                     </div>
-                    <div class="combo-meal" style="background-color: #afc98c; transition: all 0.3s ease; cursor: pointer; height: 100px; display: flex; flex-direction: column; justify-content: center; padding: 15px; margin-bottom: 10px; border-radius: 8px;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-                        <h4 class="combo-meal__title" style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
-                        <p class="combo-meal__item" style="margin: 0; line-height: 1.4;">Parotta + Dal Tadka</p>
+    
+                    <!-- Tuesday Veg -->
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Tuesday</h3>
+                        <div class="combo-meal" style="background-color: #d7e4bc; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p style="margin: 0;">Sambar Idly & Chakkarai Pongal</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #c2d6a4; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p style="margin: 0;">Rice & Aloo Mattar & Gobi 65 & Rasam</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #afc98c; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p style="margin: 0;">Chapathi & Dal Panchmel</p>
+                        </div>
+                    </div>
+    
+                    <!-- Wednesday Veg -->
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Wednesday</h3>
+                        <div class="combo-meal" style="background-color: #d7e4bc; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p style="margin: 0;">Onion Utthapam & Coconut Chutney & Sambar</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #c2d6a4; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p style="margin: 0;">Rice bowl & broccoli and baby corn curry</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #afc98c; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p style="margin: 0;">Ghee Podi Idly</p>
+                        </div>
+                    </div>
+    
+                    <!-- Thursday Veg -->
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Thursday</h3>
+                        <div class="combo-meal" style="background-color: #d7e4bc; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p style="margin: 0;">Club Sandwich + Sundal Bowl</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #c2d6a4; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p style="margin: 0;">Wheat Parotta & Bhindi & Dahi Panneer</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #afc98c; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p style="margin: 0;">Stir Fried Paneer/Mushroom Noodles</p>
+                        </div>
+                    </div>
+    
+                    <!-- Friday Veg -->
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Friday</h3>
+                        <div class="combo-meal" style="background-color: #d7e4bc; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p style="margin: 0;">Kichadi & Chutney</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #c2d6a4; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p style="margin: 0;">Paneer Biriyani & Paneer Masala</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #afc98c; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p style="margin: 0;">Idiyappam & Vegetable Stew</p>
+                        </div>
+                    </div>
+    
+                    <!-- Saturday Veg -->
+                    <div class="combo-category" style="flex: 0 0 280px; min-width: 280px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 15px; background-color: #f9f9f9;">
+                        <h3>Saturday</h3>
+                        <div class="combo-meal" style="background-color: #d7e4bc; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Breakfast</h4>
+                            <p style="margin: 0;">Puttu & Kadala Curry</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #c2d6a4; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Lunch</h4>
+                            <p style="margin: 0;">Rajma Chawal + Salad</p>
+                        </div>
+                        <div class="combo-meal" style="background-color: #afc98c; height: 100px; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+                            <h4 style="margin: 0 0 8px 0; font-weight: 600;">Dinner</h4>
+                            <p style="margin: 0;">Aloo Paratha</p>
+                        </div>
                     </div>
                 </div>
-                <!-- ... (rest of the days with original green backgrounds) ... -->
+                <button class="scroll-button right">❯</button>
             </div>
-            <button class="scroll-button right">❯</button>
         </div>
-    </div>
-</section>
+    </section>
     
     <section class="preorder-card-section" id="preorder-meals">
         <div class="container">
