@@ -10,15 +10,19 @@
       padding: 0;
       height: 100%;
       width: 100%;
-      overflow: hidden;
       font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .iframe-container {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      width: 90%;
+      max-width: 600px;
+      height: 90%;
+      max-height: 800px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      overflow: hidden;
     }
     iframe {
       width: 100%;
