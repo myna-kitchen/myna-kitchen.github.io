@@ -1197,6 +1197,11 @@ footer {
 .footer-column h3 {
   margin-bottom: 20px;
   font-size: 18px;
+  color: white;
+}
+
+.footer-column p {
+  color: white;
 }
 
 .footer-column ul {
@@ -1208,13 +1213,14 @@ footer {
 }
 
 .footer-column ul li a {
-  color: #aaa;
+  color: white;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-column ul li a:hover {
   color: white;
+  text-decoration: underline;
 }
 
 .social-links {
@@ -1243,8 +1249,18 @@ footer {
   text-align: center;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #aaa;
+  color: white;
   font-size: 14px;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
 }
 
 /* Responsive Styles */
