@@ -6,13 +6,13 @@
   <script>
     const path = window.location.pathname;
 
-    // Check if URL starts with /users/
     if (path.startsWith("/users/")) {
-      // Redirect to users/index.html but keep full path in browser
-      window.location.replace("/users/index.html" + path);
+      const userId = path.split("/").pop(); // e.g. 'ajaz123'
+      sessionStorage.setItem("userId", userId); // store temporarily
+      window.location.replace("/users/index.html");
     } else {
-      // Redirect all other unknown routes to homepage
-      window.location.replace("/index.html");
+      // Redirect to homepage or custom 404
+      window.location.replace("/");
     }
   </script>
 </head>
