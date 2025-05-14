@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    const path = window.location.pathname;
+
+    // Check if URL starts with /users/
+    if (path.startsWith("/users/")) {
+      // Redirect to users/index.html but keep full path in browser
+      window.location.replace("/yourrepo/users/index.html" + path);
+    } else {
+      // Redirect all other unknown routes to homepage
+      window.location.replace("/yourrepo/index.html");
+    }
+  </script>
+</head>
+<body>
+  Redirecting...
+</body>
+</html>
