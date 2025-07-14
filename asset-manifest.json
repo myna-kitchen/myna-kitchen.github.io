@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/myna/static/css/main.1c54056d.css",
+    "main.js": "/myna/static/js/main.8ec5fec6.js",
+    "static/js/453.64930c87.chunk.js": "/myna/static/js/453.64930c87.chunk.js",
+    "index.html": "/myna/index.html",
+    "main.1c54056d.css.map": "/myna/static/css/main.1c54056d.css.map",
+    "main.8ec5fec6.js.map": "/myna/static/js/main.8ec5fec6.js.map",
+    "453.64930c87.chunk.js.map": "/myna/static/js/453.64930c87.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c54056d.css",
+    "static/js/main.8ec5fec6.js"
+  ]
+}

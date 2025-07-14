@@ -1,0 +1,25 @@
+{
+  "short_name": "Myna Kitchen",
+  "name": "Myna Kitchen - Home Cooked Meals",
+  "icons": [
+    {
+      "src": "images/myna-logo.jpg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "images/myna-logo.jpg",
+      "type": "image/jpeg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/myna-logo.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#e67e22",
+  "background_color": "#ffffff"
+} 

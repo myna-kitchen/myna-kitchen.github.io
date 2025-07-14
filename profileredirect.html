@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Created | Myna Kitchen</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdfdfd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 40px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .email-highlight {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎉 Profile Created Successfully!</h1>
+    <p>Thank you for signing up with <strong>Myna Kitchen</strong>.</p>
+    <p>
+      We’ve sent a sign-in link to your email: <span class="email-highlight" id="emailDisplay">your@email.com</span>
+    </p>
+    <p>Please check your inbox (and spam folder) for the access link.</p>
+    <div class="footer">Need help? <a href="https://wa.me/917418688269">Chat on WhatsApp</a></div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get('email') || "your@email.com";
+    document.getElementById('emailDisplay').textContent = email;
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Page</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <iframe id="users-frame" allowTransparency="true" scrolling="auto"></iframe>
+
+  <script>
+    // Extract the user ID from URL path, e.g., /users/123
+    // const pathParts = window.location.pathname.split('/');
+    // const userId = pathParts[pathParts.length - 1] || 'defaultUser';
+
+    const userId = sessionStorage.getItem("userId") || "defaultUser";
+
+    // Set iframe source with userId as a parameter
+    const iframe = document.getElementById('users-frame');
+    iframe.src = `https://creatorapp.zohopublic.in/kitchenmyna/myna/page-embed/userview_page/wUr7kPUKr4r4EJOUBArDUPgqwYDp4udXCSbrtQ1ESQY0J0gV6KYrG7beTWwz1vpxOypNOfkYx9sb0HakvP9xe2JfBxWfTqEgtyeC?userid=${encodeURIComponent(userId)}`;
+  </script>
+</body>
+</html>
