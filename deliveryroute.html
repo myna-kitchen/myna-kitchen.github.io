@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Delivery Route - Myna Kitchen</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
+    .iframe-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .meal-choice {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-direction: column;
+    }
+    .meal-choice button {
+      padding: 15px 25px;
+      font-size: 16px;
+      background-color: #8A3DFB;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="content"></div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const meal = params.get("meal");
+  const container = document.getElementById("content");
+
+  function updateMealParam(newMeal) {
+    const updatedParams = new URLSearchParams(window.location.search);
+    updatedParams.set("meal", newMeal);
+    window.location.search = updatedParams.toString();
+  }
+
+  if (meal) {
+    const iframeUrl = `https://creatorapp.zohopublic.in/kitchenmyna/myna/page-embed/Delivery_Route/G2VyqxPf25zn4UCdQ51M28816R6Yw4y8HRHYOHEwb0pxuYR8NzqtJZxNuj5QTJ0vdjpkyNaYEWHQgzyghtCkvugtgqpty44NG0uF?meal=${encodeURIComponent(meal)}`;
+    container.innerHTML = `<div class="iframe-container">
+      <iframe src="${iframeUrl}" allowTransparency="true" scrolling="auto"></iframe>
+    </div>`;
+  } else {
+    container.innerHTML = `
+      <div class="meal-choice">
+        <h2>Please choose your meal:</h2>
+        <button onclick="updateMealParam('Breakfast')">Breakfast</button>
+        <button onclick="updateMealParam('Lunch')">Lunch</button>
+        <button onclick="updateMealParam('Dinner')">Dinner</button>
+      </div>`;
+  }
+</script>
+
+</body>
+</html>
