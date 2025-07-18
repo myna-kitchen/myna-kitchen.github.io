@@ -3,74 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <title>Delivery Route - Myna Kitchen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body, html {
+    /* Reset and base layout */
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      width: 100%;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f8f4ff, #f0ebff);
+      color: #333;
     }
+
+    /* Page container */
+    #content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    /* Iframe layout */
     .iframe-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      flex-grow: 1;
+      padding: 10px;
     }
+
     iframe {
       width: 100%;
       height: 100%;
       border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+
+    /* Meal selection layout */
     .meal-choice {
       display: flex;
-      height: 100%;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 20px;
     }
+
+    .meal-choice h2 {
+      margin-bottom: 30px;
+      font-size: 24px;
+      text-align: center;
+      color: #4B0082;
+    }
+
+    /* Buttons */
     .meal-choice button {
-      padding: 15px 25px;
-      font-size: 16px;
-      background-color: #8A3DFB;
-      color: white;
-      border: none;
-      border-radius: 10px;
+      width: 80%;
+      max-width: 300px;
+      padding: 15px;
+      margin: 10px 0;
+      font-size: 18px;
+      border-radius: 12px;
+      border: 3px solid #8A3DFB;
+      background-color: #f3ecff;
+      color: #4B0082;
       cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .meal-choice button:hover {
+      background-color: #8A3DFB;
+      color: #fff;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 600px) {
+      .meal-choice h2 {
+        font-size: 20px;
+      }
+
+      .meal-choice button {
+        font-size: 16px;
+        width: 90%;
+      }
     }
   </style>
 </head>
 <body>
   <div id="content"></div>
 
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const meal = params.get("meal");
-  const container = document.getElementById("content");
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const meal = params.get("meal");
+    const container = document.getElementById("content");
 
-  function updateMealParam(newMeal) {
-    const updatedParams = new URLSearchParams(window.location.search);
-    updatedParams.set("meal", newMeal);
-    window.location.search = updatedParams.toString();
-  }
+    function updateMealParam(newMeal) {
+      const updatedParams = new URLSearchParams(window.location.search);
+      updatedParams.set("meal", newMeal);
+      window.location.search = updatedParams.toString();
+    }
 
-  if (meal) {
-    const iframeUrl = `https://creatorapp.zohopublic.in/kitchenmyna/myna/page-embed/Delivery_Route/G2VyqxPf25zn4UCdQ51M28816R6Yw4y8HRHYOHEwb0pxuYR8NzqtJZxNuj5QTJ0vdjpkyNaYEWHQgzyghtCkvugtgqpty44NG0uF?meal=${encodeURIComponent(meal)}`;
-    container.innerHTML = `<div class="iframe-container">
-      <iframe src="${iframeUrl}" allowTransparency="true" scrolling="auto"></iframe>
-    </div>`;
-  } else {
-    container.innerHTML = `
-      <div class="meal-choice">
-        <h2>Please choose your meal:</h2>
-        <button onclick="updateMealParam('Breakfast')">Breakfast</button>
-        <button onclick="updateMealParam('Lunch')">Lunch</button>
-        <button onclick="updateMealParam('Dinner')">Dinner</button>
-      </div>`;
-  }
-</script>
-
+    if (meal) {
+      const queryString = window.location.search;
+      const iframeUrl = `https://creatorapp.zohopublic.in/kitchenmyna/myna/page-embed/Delivery_Route/G2VyqxPf25zn4UCdQ51M28816R6Yw4y8HRHYOHEwb0pxuYR8NzqtJZxNuj5QTJ0vdjpkyNaYEWHQgzyghtCkvugtgqpty44NG0uF${queryString}`;
+      container.innerHTML = `
+        <div class="iframe-container">
+          <iframe src="${iframeUrl}" allowTransparency="true" scrolling="auto"></iframe>
+        </div>`;
+    } else {
+      container.innerHTML = `
+        <div class="meal-choice">
+          <h2>Welcome, Delivery Partner!<br>Please select your delivery shift:</h2>
+          <button onclick="updateMealParam('Breakfast')">Breakfast</button>
+          <button onclick="updateMealParam('Lunch')">Lunch</button>
+          <button onclick="updateMealParam('Dinner')">Dinner</button>
+        </div>`;
+    }
+  </script>
 </body>
 </html>
