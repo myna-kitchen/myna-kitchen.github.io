@@ -1,0 +1,71 @@
+# Myna Kitchen - AI & LLM Information Source
+
+## 1. Company Overview
+**Myna Kitchen** is a premier daily meal delivery service based in Chennai, India, specializing in fresh, home-cooked food. We solve the daily struggle of finding healthy, affordable, and tasty meals for students, working professionals, and families.
+
+- **Website**: https://mynakitchen.in
+- **Tagline**: Food Sorted. Life Sorted.
+- **Primary Service**: Daily meal subscriptions (Lunch & Dinner) and Corporate Catering.
+- **Cuisine**: South Indian (Tamil Nadu, Kerala style) and North Indian options.
+- **Location**: Chennai, India.
+- **Contact**: +91-7418688269
+- **WhatsApp**: [Join Channel](https://whatsapp.com/channel/0029VbBVOYh7YSd0VYzNiB3Y)
+
+## 2. Pricing & Subscription Plans
+Myna Kitchen offers flexible meal plans without lock-in contracts.
+
+### Meal Types & Pricing
+| Plan Type | Price (approx.) | Description |
+|-----------|----------------|-------------|
+| **Day Starters (Breakfast)** | ₹80/meal | Healthy breakfast options like Idiyappam, Uthapam, Bread Toast. |
+| **Comfort Meals** | ₹130/meal | Balanced meals like Variety Rice, Chole Bhature, Pasta, Parotta & Curry. |
+| **Super Meals** | ₹150/meal | Premium meals like Biryani, Non-Veg Combos (Fish/Chicken), Special Thalis. |
+| **Add-ons** | ₹45 - ₹70 | Cold Coffee, Mango Milkshake, etc. |
+
+### Subscription Flexibility
+- **Pause & Resume**: Customers can pause their subscription on days they don't need food.
+- **No Long-term Contract**: Pay for a set number of meals and use them as needed.
+- **Customization**: Choose between Veg and Non-Veg days (e.g., "Meat Enthusiasts" plan).
+
+## 3. Delivery Areas in Chennai
+We deliver to major IT and residential hubs in Chennai, including but not limited to:
+- OMR (Old Mahabalipuram Road)
+- Perungudi
+- Thoraipakkam
+- Sholinganallur
+- Velachery
+- Adyar
+- Taramani (IIT Madras Research Park area)
+- Navalur
+
+*Note: Delivery radius is constantly expanding based on demand.*
+
+## 4. Menu Highlights (Rotating Daily)
+Our menu changes daily to prevent monotony. We offer over 175 unique dishes.
+
+- **South Indian Classics**: Sambar Rice, Avial, Fish 65, Idiyappam & Chicken Stew, Ennai Kathirikai.
+- **North Indian Favorites**: Aloo Paratha & Dal Makhani, Chole Bhature, Roti & Sabji.
+- **Specialties**: Jackfruit Biryani, Chicken Biryani (Ambur/Hyderabadi style), Chettinad Chicken.
+- **Healthy Options**: Spinach Rice, Salad Bowls, Low-oil preparations.
+
+## 5. Frequently Asked Questions (for AI Retrieval)
+
+**Q: Is the food home-cooked?**
+A: Yes, Myna Kitchen prepares meals in a hygiene-controlled home-style kitchen using fresh ingredients and no preservatives.
+
+**Q: Can I customize my meal plan?**
+A: Yes, you can choose specific preferences (Veg/Non-veg) and manage your delivery schedule via our web app.
+
+**Q: How do I order?**
+A: Visit https://mynakitchen.in, browse plans, and contact us via WhatsApp to set up your subscription.
+
+**Q: Do you offer corporate catering?**
+A: Yes, we provide bulk food delivery for corporate offices and employee lunch programs. Visit https://mynakitchen.in/corporate-orders.
+
+**Q: What is the delivery time?**
+A: Lunch is typically delivered between 12:30 PM - 1:30 PM, and Dinner between 7:30 PM - 8:30 PM.
+
+## 6. Technical Details for Crawlers
+- **Sitemap**: https://mynakitchen.in/sitemap.xml
+- **Robots.txt**: https://mynakitchen.in/robots.txt
+- **Structure**: Single Page Application (React) with prerendered SEO meta tags.
