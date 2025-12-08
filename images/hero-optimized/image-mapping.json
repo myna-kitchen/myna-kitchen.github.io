@@ -1,16 +1,5 @@
 [
   {
-    "original": "1208_x_1080_photos__28_.jpg",
-    "originalBaseName": "1208_x_1080_photos__28_",
-    "baseName": "1208_x_1080_photos__28_",
-    "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwBACdASoUABQAPzGCtlOuqKUkN/VYAdAmCUAAAmn704xa8NHvexJwEwAA4bGe8lwZza191FeVKFj22WhiFQ2Efb7odGUz6Jbz87dNjs5gAA==",
-    "sizes": {
-      "mobile": 480,
-      "tablet": 768,
-      "desktop": 1200
-    }
-  },
-  {
     "original": "51ho3ce412c.webp.jpeg",
     "originalBaseName": "51ho3ce412c.webp",
     "baseName": "51ho3ce412c.webp",
@@ -26,17 +15,6 @@
     "originalBaseName": "70bdb087c527b5287b5836552d155406",
     "baseName": "70bdb087c527b5287b5836552d155406",
     "lqip": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABQBACdASoUABQAPzl+uFOvJ6Wit/VYAeAnCUAW2QI/4o64H4/yCY47FaAAAPzfICZuoB94mjybTEyIyUptDdbTu4kvqTmHFa+OD69OcMudWAAA",
-    "sizes": {
-      "mobile": 480,
-      "tablet": 768,
-      "desktop": 1200
-    }
-  },
-  {
-    "original": "7217fa5a7fd8cf607f27dd8af2dd6131.jpg",
-    "originalBaseName": "7217fa5a7fd8cf607f27dd8af2dd6131",
-    "baseName": "7217fa5a7fd8cf607f27dd8af2dd6131",
-    "lqip": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAABQAwCdASoUABQAPzmQuVWvKiWksBgIAeAnCWkAAD6Im+ubAAD+6JoxAep8I8kmTLLJNvHwjLEIAA==",
     "sizes": {
       "mobile": 480,
       "tablet": 768,
@@ -77,65 +55,10 @@
     }
   },
   {
-    "original": "ChatGPT Image Jun 5, 2025 at 11_47_55 PM.png",
-    "originalBaseName": "ChatGPT Image Jun 5, 2025 at 11_47_55 PM",
-    "baseName": "ChatGPT-Image-Jun-5-2025-at-11_47_55-PM",
-    "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQBACdASoUABQAPzmYwVmvKqcjqAgB4CcJTPPIws0IH54SWttIvNUOAAD+6oqHe6tpVdw+3W/u/QT82mTLR4IuOcPCWZ6Y7qUiU0P75/ydvUe4tArL+Sdtf4K3QAAA",
-    "sizes": {
-      "mobile": 480,
-      "tablet": 768,
-      "desktop": 1200
-    }
-  },
-  {
     "original": "Chicken Biryani.jpg",
     "originalBaseName": "Chicken Biryani",
     "baseName": "Chicken-Biryani",
     "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQBACdASoUABQAPzGAtlOuqCUit/VYAdAmCWwArDLfAZQA56IkD2uanAD9RsYi7h+RuNF+Z898yf54rdpP4q3sDz6vpEtWx4oeMX/kY+axSi3HK8HgyM/UDtWGkgAA",
-    "sizes": {
-      "mobile": 480,
-      "tablet": 768,
-      "desktop": 1200
-    }
-  },
-  {
-    "original": "Kothuparotta8.jpg",
-    "originalBaseName": "Kothuparotta8",
-    "baseName": "Kothuparotta8",
-    "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABQBACdASoUABQAPzWAt1OvKCUit/VYAeAmiWgAxNgPOYUf9GHfhNQ7U4YAAP0hji9cQDFE1vBbtxZmv663ucHIEP2T9O+xqHBiMe0y0wFLYvxciD2oS3/QAAA=",
-    "sizes": {
-      "mobile": 480,
-      "tablet": 768,
-      "desktop": 1200
-    }
-  },
-  {
-    "original": "Mango Milkshake.jpg",
-    "originalBaseName": "Mango Milkshake",
-    "baseName": "Mango-Milkshake",
-    "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAwCdASoUABQAPzmUwFmvKaaqqAgB4CcJYwCzgAGFqgAA1nmONdkZASWLYKb9tmBZc9wGqam1391dTaZtVLZVtUwAAA==",
-    "sizes": {
-      "mobile": 480,
-      "tablet": 768,
-      "desktop": 1200
-    }
-  },
-  {
-    "original": "Mango-Milkshake-Recipe.jpg",
-    "originalBaseName": "Mango-Milkshake-Recipe",
-    "baseName": "Mango-Milkshake-Recipe",
-    "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQBACdASoUABQAPzmCu1OvKKaisBgMAeAnCWIAtsgJDhvcBViMopnwAADOJuNKlz/4hJq0+mshQrV7Fe+jcZ8r1Rls2WO0aDcjaUfJ09Br9Ll8ve3urgAA",
-    "sizes": {
-      "mobile": 480,
-      "tablet": 768,
-      "desktop": 1200
-    }
-  },
-  {
-    "original": "cdf63c34f8768539fb1d30f133f585dd.jpg",
-    "originalBaseName": "cdf63c34f8768539fb1d30f133f585dd",
-    "baseName": "cdf63c34f8768539fb1d30f133f585dd",
-    "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADQAwCdASoUABQAPyV8sVOuKCSit/qoAcAkiUAY3oQ76DLGbfwogAAA/tjK8ELKQ68SC7Ji2c4r27X9XmkJvo5x34azlc526wx3TrPviu7n0SN8mHkF1AAA",
     "sizes": {
       "mobile": 480,
       "tablet": 768,
@@ -209,17 +132,6 @@
     }
   },
   {
-    "original": "food-delivery-stock-image-2.jpeg",
-    "originalBaseName": "food-delivery-stock-image-2",
-    "baseName": "food-delivery-stock-image-2",
-    "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACQBACdASoUABQAPzmSvVgvKiYjqAqp4CcJYwDImA3TfzbG4UCDIltLJmYtn0AA/tWGO/Oib4AzNL2uteb4FwjfwB8ahm2b/bUvLfbiUMJUB3jaPBjtCfbdw0WkcGIAAAA=",
-    "sizes": {
-      "mobile": 480,
-      "tablet": 768,
-      "desktop": 1200
-    }
-  },
-  {
     "original": "garliccurry rice+beanspodimas+papadam.jpg",
     "originalBaseName": "garliccurry rice+beanspodimas+papadam",
     "baseName": "garliccurry-rice-beanspodimas-papadam",
@@ -268,6 +180,28 @@
     "originalBaseName": "jackfruit biriyani+babychillicorn+adaprathaman",
     "baseName": "jackfruit-biriyani-babychillicorn-adaprathaman",
     "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACwBACdASoUABQAPyl6tFOuJ6Uit/qoAcAlCWMAxNgaJmnAw29Oq7oru/dS1PVwAP7o7eM0VjjLHt1etYgCzzMj1lEyhMz2vyJb3ieNPUAAAA==",
+    "sizes": {
+      "mobile": 480,
+      "tablet": 768,
+      "desktop": 1200
+    }
+  },
+  {
+    "original": "Kothuparotta8.jpg",
+    "originalBaseName": "Kothuparotta8",
+    "baseName": "Kothuparotta8",
+    "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABQBACdASoUABQAPzWAt1OvKCUit/VYAeAmiWgAxNgPOYUf9GHfhNQ7U4YAAP0hji9cQDFE1vBbtxZmv663ucHIEP2T9O+xqHBiMe0y0wFLYvxciD2oS3/QAAA=",
+    "sizes": {
+      "mobile": 480,
+      "tablet": 768,
+      "desktop": 1200
+    }
+  },
+  {
+    "original": "Mango Milkshake.jpg",
+    "originalBaseName": "Mango Milkshake",
+    "baseName": "Mango-Milkshake",
+    "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAwCdASoUABQAPzmUwFmvKaaqqAgB4CcJYwCzgAGFqgAA1nmONdkZASWLYKb9tmBZc9wGqam1391dTaZtVLZVtUwAAA==",
     "sizes": {
       "mobile": 480,
       "tablet": 768,
